@@ -1,0 +1,72 @@
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 62.5%;
+    --primary-color: #4db6ac;
+    --primary-light-color: #82e9de;
+    --primary-dark-color: #00867d;
+    --primary-text-color: #fafafa;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--primary-color);
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 100vh;
+}
+
+h1,h2 {
+    width: 100%;
+    color: var(--primary-text-color);
+    font-size: 3rem !important; /* normalize.css is applied to h1 */
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--primary-dark-color);;
+}
+
+h1 {
+    display: inline-block;
+    padding: .5rem;
+    border-radius: 5px;
+    width : auto;
+}
+
+h2 {
+    background-color: transparent;
+    width : auto;
+}
+
+img {
+    width: 50%;
+    min-width: 20rem;
+}
+
+@media (min-width: 640px) {
+    #main {
+        height: 100vh;
+    }
+    h1 {
+        padding: 2rem;
+    }
+    img {
+        width: 40%;
+    }
+}
