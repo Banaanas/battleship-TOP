@@ -80,11 +80,12 @@ Weather Application achieved as part of <a href="https://www.theodinproject.com/
 
 - [Vanilla JavaScript](http://vanilla-js.com/)
 
-ES6 - Geolocation - Async / Await - Factory Functions - API (axios)
+ES6 - Geolocation - Set Object
 - [HTML5](https://www.w3.org/html/)
 - [CSS3](https://www.w3.org/Style/CSS/Overview.html)
 
 Responsive Design - Flexbox - Media Queries
+TDD - Jest
 - [Webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
 - [core-js](https://github.com/zloirock/core-js)
