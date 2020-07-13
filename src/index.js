@@ -9,7 +9,6 @@ import "./styles/normalize.css";
 
 // Test import of a JavaScript function, an SVG, and Sass
 import battleshipLogo from "./images/battleship.svg";
-import Ship from "./js/ships-factory";
 
 // Create SVG logo node
 const logo = document.createElement("img");
@@ -19,7 +18,15 @@ logo.src = battleshipLogo;
 const app = document.querySelector("#main");
 app.append(logo);
 
-const battleship = Ship(200);
-battleship.hit(10);
-console.log(battleship.strikes);
+/*
+  Carrier - 5
+  Battleship - 4
+  Destroyer - 3
+  Submarine - 3
+  Patrol Boat - 2
+*/
 
+/*
+* Random Placement;
+* Modal explaining rules;
+* */
