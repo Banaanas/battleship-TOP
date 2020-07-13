@@ -1,7 +1,6 @@
 import Ship from "./ships-factory";
 
 const expectedShip = {
-  name: "expectedShip",
   shipLength: 2,
   coords: [],
   damages: [],

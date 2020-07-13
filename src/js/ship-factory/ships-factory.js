@@ -1,5 +1,4 @@
-const Ship = (name, shipLength) => ({
-  name,
+const Ship = (shipLength) => ({
   shipLength,
   coords: [],
   damages: [],
