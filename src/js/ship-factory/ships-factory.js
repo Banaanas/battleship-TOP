@@ -3,15 +3,11 @@ const Ship = (shipLength) => ({
   coords: [],
   damages: [],
   sunk: false,
-  hit(position) {
-    if (this.damages.includes(position)) {
-      console.log("You can not hit the same position twice");
-      return false;
-    }
+  hit(position) { // Push damages into ship's damages array
     this.damages.push(position);
     return this.damages;
   },
-  isSunk() {
+  isSunk() { // Check if the ship is sunk
     if (this.damages.length === shipLength) this.sunk = true;
     return this.sunk;
   },

@@ -83,6 +83,7 @@ h1 {
     background-color: var(--primary-light-color);
     border: #fafafa solid 3px;
     cursor: pointer;
+    overflow: hidden;
 }
 
 /* A - J */
@@ -100,4 +101,9 @@ h1 {
 .grid-container span:first-child{
     background-color: var(--primary-light-color);
     cursor: default;
+}
+
+.explosion-icon, .sea-icon {
+    width: 2.8rem;
+    max-height: 2rem;
 }
