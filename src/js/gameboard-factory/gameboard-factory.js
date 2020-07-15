@@ -33,6 +33,9 @@ const Gameboard = () => ({
       return this.gameGrid;
     });
   },
+  randomCoords() {
+    console.log("random coords");
+  },
   randomPlay() { // Random Numberr Choice for computer player
     // if previousAttacks === 100, it means all computer's moves have been played
     if (this.previousAttacks.length >= 100) {

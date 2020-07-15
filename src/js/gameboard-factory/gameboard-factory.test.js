@@ -125,10 +125,10 @@ describe("gameboardTest.receiveAttack method - 3", () => {
 });
 
 describe("gameboardTest.allShipsSunk method", () => {
-  test(" if the game does NOT end while one players ships have not ALL been sunk", () => {
+  test("if the game does NOT end while one players ships have not ALL been sunk", () => {
     expect(gameboardTest.allShipsSunk()).toBe(false);
   });
-  test(" if the game ends once one players ships have all been sunk", () => {
+  test("if the game ends once one players ships have all been sunk", () => {
     gameboardTest.allShips[0].damages = [0, 1, 2, 3, 4];
     gameboardTest.allShips[1].damages = [70, 71, 72];
     gameboardTest.allShips[2].coords = [95, 96]; // Have to set coords agains
