@@ -2,15 +2,15 @@ import randomCoordinates from "./random-coordinates";
 
 describe("gameboardTest..randomCoords method", () => {
   it("should generate array which length is equal to shipLength", () => {
-    expect(randomCoordinates(5).length).toBe(5);
-    expect(randomCoordinates(4).length).toBe(4);
-    expect(randomCoordinates(3).length).toBe(3);
+    expect(randomCoordinates(5, "horizontal").length).toBe(5);
+    expect(randomCoordinates(4, "vertical").length).toBe(4);
+    expect(randomCoordinates(3, "horizontal").length).toBe(3);
   });
-  
+
   it("should return undefined if shipLength is greater than 5", () => {
-    expect(randomCoordinates(6)).toBe(undefined);
-    expect(randomCoordinates(10)).toBe(undefined);
-    expect(randomCoordinates(4)).not.toBe(undefined);
+    expect(randomCoordinates(6, "vertical")).toBe(undefined);
+    expect(randomCoordinates(10, "horizontal")).toBe(undefined);
+    expect(randomCoordinates(4, "vertical")).not.toBe(undefined);
   });
 
   it("should generate X (shipLength) consecutive numbers if HORIZONTAL MOVE", () => {

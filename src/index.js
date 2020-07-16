@@ -41,6 +41,81 @@ const randomCoordinates = (shipLength, orientation) => {
 
   let randomFirstCoord;
   let randomLastCoord;
+  let randomNumber;
+
+  if (orientation === "horizontal") {
+    randomNumber = Math.floor(Math.random() * 10);
+  } else if (orientation === "vertical") {
+    /* Regarding the vertical placement, the randomNumber to randomly set
+   a range (numberRanges[randomNumber]) must not exceed the range from which
+   placement is impossible, else it would generate an infinite do while loop
+   later, while trying to find a random coordinate.
+   Example - shipLenth is 2, then the maximum range would be [80, 89] -> numberRanges[8].
+   So the randomNumber to randomly set a range should be 8. Which is 10 - 2.
+   --> For each ship, it is 10 - shipLength.
+    */
+    randomNumber = getRandomInt(0, 10 - shipLength);
+  }
+
+  // Chose one range randomly
+  const randomRange = numberRanges[randomNumber];
+  const [minRangeNumb, maxRangeNumb] = randomRange;
+
+  if (orientation === "horizontal") {
+    // Generate Random Coordinates which can't exceed the end of the range
+    do {
+      randomFirstCoord = getRandomInt(minRangeNumb, maxRangeNumb);
+      randomLastCoord = randomFirstCoord + (shipLength - 1);
+      // Last coordinate must not exceed the end of the horizontal range
+    } while (randomLastCoord > (maxRangeNumb));
+  }
+
+  if (orientation === "vertical") {
+    // Generate Random Coordinates which can't exceed the end of the range
+    do {
+      randomFirstCoord = getRandomInt(minRangeNumb, maxRangeNumb);
+      // DIFFERENCE - randomLastCoord = randomFirstCoord + (shipLength - 1);
+      randomLastCoord = randomFirstCoord + ((shipLength - 1) * 10);
+      // eslint-disable-next-line no-debugger
+      // Last coordinate must not exceed the end of the horizontal range
+      // DIFFERENCE - } while (randomLastCoord > (maxRangeNumb));
+    } while (randomLastCoord > 99);
+  }
+
+  const coordsArr = [];
+
+  if (orientation === "horizontal") {
+    // Push X (shipLength) coordinates, starting from randomFirstCoord
+    // eslint-disable-next-line no-plusplus
+    for (let index = randomFirstCoord;
+      index < (randomFirstCoord + shipLength); index++) {
+      coordsArr.push(index);
+    }
+  }
+
+  if (orientation === "vertical") {
+    // Push X (shipLength) coordinates, starting from randomFirstCoord
+    for (let index = randomFirstCoord; index <= randomLastCoord; index += 10) {
+      coordsArr.push(index);
+    }
+  }
+
+  return coordsArr;
+};
+
+console.log(randomCoordinates(5, "horizontal"));
+console.log(randomCoordinates(5, "vertical"));
+
+/*
+const randomCoordinates = (shipLength, orientation) => {
+  // Return undefined if shipLength is greater than 5 cases
+  if (shipLength > 5) {
+    console.log("Ship length can not exceed 5 cases");
+    return;
+  }
+
+  let randomFirstCoord;
+  let randomLastCoord;
 
   // Chose one range randomly
   const randomNumber = Math.floor(Math.random() * 10);
@@ -55,15 +130,6 @@ const randomCoordinates = (shipLength, orientation) => {
     // Last coordinate must not exceed the end of the horizontal range
   } while (randomLastCoord > (maxRangeNumb));
 
-  /*
-  // Generate Random Coordinates which can't exceed the end of the range
-  do {
-    randomFirstCoord = Math.floor(Math.random() * 10);
-    randomLastCoord = randomFirstCoord + (shipLength - 1);
-    // Last coordinate must not exceed the end of the horizontal range
-  } while (randomLastCoord >= 10);
-  */
-
   const coordsArr = [];
 
   // Push X (shipLength) coordinates, starting from randomFirstCoord
@@ -73,8 +139,7 @@ const randomCoordinates = (shipLength, orientation) => {
   }
   return coordsArr;
 };
-
-console.log(randomCoordinates(11));
+*/
 
 /* TEST
 if (coordsArr.length !== shipLength) return;
@@ -86,6 +151,14 @@ for (const previousCoordsArr of arrOfCoordsArr) {
     return;
   }
 }
+*/
+/*
+// Generate Random Coordinates which can't exceed the end of the range
+do {
+  randomFirstCoord = Math.floor(Math.random() * 10);
+  randomLastCoord = randomFirstCoord + (shipLength - 1);
+  // Last coordinate must not exceed the end of the horizontal range
+} while (randomLastCoord >= 10);
 */
 
 /*
