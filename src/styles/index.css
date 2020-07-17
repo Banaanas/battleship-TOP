@@ -57,6 +57,7 @@ h1 {
 
 .players-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -107,3 +108,21 @@ h1 {
     width: 2.8rem;
     max-height: 2rem;
 }
+
+.navy {
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.possible-choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    background-color: red;
+    border: #fafafa solid 3px;
+    cursor: pointer;
+    overflow: hidden;}

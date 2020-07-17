@@ -3,6 +3,8 @@ import Ship from "../ship-factory/ships-factory";
 import renderInitGameboard from "../game-DOM/render-init-gameboard";
 import Gameboard from "../gameboard-factory/gameboard-factory";
 import gameController from "../game-controller/game-controller";
+import getRandomNavy from "../random-coordinates/random-coordinates";
+import { phantomShip, outPhantomShip } from "../manual-coordinates/manual-coordinates";
 
 // Initialize Battleship Game
 const initGame = () => {
@@ -45,19 +47,20 @@ const initGame = () => {
   humanGameboard.allShips[1].coords = [50, 60, 70, 80];
   humanGameboard.allShips[2].coords = [67, 68, 69];
   humanGameboard.allShips[3].coords = [97, 98, 99];
-  humanGameboard.allShips[4].coords = [18, 28, 38];
+  humanGameboard.allShips[4].coords = [18, 28];
 
   // Place human ships on the gameboard
   humanGameboard.allShips.forEach((ship) => {
     humanGameboard.placeShip(ship);
   });
 
-  // Set coordinates for computer ships
-  computerGameboard.allShips[0].coords = [25, 26, 27, 28, 29];
-  computerGameboard.allShips[1].coords = [30, 40, 50, 60];
-  computerGameboard.allShips[2].coords = [67, 68, 69];
-  computerGameboard.allShips[3].coords = [84, 85, 86];
-  computerGameboard.allShips[4].coords = [1, 2, 3];
+  // Set random coordinates for computer ships
+  const randomNavyCoords = getRandomNavy();
+  computerGameboard.allShips[0].coords = randomNavyCoords.carrier.coords;
+  computerGameboard.allShips[1].coords = randomNavyCoords.battleship.coords;
+  computerGameboard.allShips[2].coords = randomNavyCoords.submarine.coords;
+  computerGameboard.allShips[3].coords = randomNavyCoords.destroyer.coords;
+  computerGameboard.allShips[4].coords = randomNavyCoords.patrolBoat.coords;
 
   // Place computer ships on the gameboard
   computerGameboard.allShips.forEach((ship) => {
@@ -74,6 +77,15 @@ const initGame = () => {
 
   // Control the game
   gameController(humanGameboard, computerGameboard);
+
+  humanGameboardCases.forEach((item, index) => {
+    item.addEventListener("mouseenter", () => {
+      phantomShip(index);
+    });
+    item.addEventListener("mouseleave", (event) => {
+      outPhantomShip(humanGameboard, humanGameboardCases);
+    });
+  });
 };
 
 export default initGame;
