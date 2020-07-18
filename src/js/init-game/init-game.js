@@ -4,7 +4,7 @@ import renderInitGameboard from "../game-DOM/render-init-gameboard";
 import Gameboard from "../gameboard-factory/gameboard-factory";
 import gameController from "../game-controller/game-controller";
 import getRandomNavy from "../random-coordinates/random-coordinates";
-import placement from "../manual-coordinates/manual-coordinates";
+import shipChoiceDOM from "../manual-coordinates/placement-DOM";
 
 // Initialize Battleship Game
 const initGame = () => {
@@ -42,6 +42,7 @@ const initGame = () => {
     computerGameboard.allShips.push(ship);
   });
 
+  /*
   // Set coordinates for human ships
   humanGameboard.allShips[0].coords = [0, 1, 2, 3, 4];
   humanGameboard.allShips[1].coords = [50, 60, 70, 80];
@@ -53,6 +54,7 @@ const initGame = () => {
   humanGameboard.allShips.forEach((ship) => {
     humanGameboard.placeShip(ship);
   });
+*/
 
   // Set random coordinates for computer ships
   const randomNavyCoords = getRandomNavy();
@@ -78,14 +80,19 @@ const initGame = () => {
   // Control the game
   gameController(humanGameboard, computerGameboard);
 
-  humanGameboardCases.forEach((item, index) => {
-    item.addEventListener("mouseenter", () => {
-      placement.getSpectralShip(index, humanGameboard);
-    });
-    item.addEventListener("mouseleave", () => {
-      placement.eraseSpectralShip(humanGameboard, humanGameboardCases);
-    });
-  });
+  shipChoiceDOM(humanGameboard, humanGameboardCases);
+
+  /*  humanGameboardCases.forEach((item, index) => {
+      /!* item.addEventListener("mouseenter", () => {
+        placement.displaySpectralShip(index, humanGameboard);
+      }); *!/
+      item.addEventListener("mouseenter", () => {
+        placement.displaySpectralShip(index, humanGameboard);
+      });
+      item.addEventListener("mouseleave", () => {
+        placement.eraseSpectralShip(humanGameboard, humanGameboardCases);
+      });
+    }); */
 };
 
 export default initGame;

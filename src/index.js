@@ -6,9 +6,7 @@ import "./styles/index.scss";
 import "./styles/index.css";
 import "./styles/normalize.css";
 import initGame from "./js/init-game/init-game";
-import shipChoiceDOM from "./js/manual-coordinates/placement-DOM";
 
-shipChoiceDOM()
 initGame();
 
 /*
