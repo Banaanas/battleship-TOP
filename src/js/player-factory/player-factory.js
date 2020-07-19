@@ -20,7 +20,7 @@ const Player = (name, enemyGameboard) => ({
 
     const coordinates = coord;
     if (this.previousAttacks.includes(coordinates)) {
-      console.log("You can't make same move twice"); // Player can not make same play twice
+      console.log("You can't make same move twice"); // player-factory can not make same play twice
       return;
     }
     this.previousAttacks.push(coordinates); // Push move number into previousAttacks array

@@ -9,7 +9,7 @@ const computerPlayer = Player("computerPlayer", humanGameboard);
 
 // console.log(computerGameboard.allShips[0]);
 
-describe("Player Factory", () => {
+describe("player-factory Factory", () => {
   const carrier = Ship("carrier", 5);
   carrier.coords = [10, 11, 12, 13, 14];
   computerGameboard.allShips.push(carrier);

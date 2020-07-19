@@ -9,6 +9,12 @@ import initGame from "./js/init-game/init-game";
 
 initGame();
 
+const humanGameboardCases = document.querySelectorAll("#human-gameboard .gameboard-array");
+
+humanGameboardCases.forEach((item, index) => {
+  item.setAttribute("number", index);
+});
+
 /*
 * Random Placement;
 * Modal explaining rules;
