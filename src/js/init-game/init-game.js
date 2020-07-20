@@ -2,9 +2,14 @@
 import Ship from "../ship-factory/ships-factory";
 import renderInitGameboard from "../game-DOM/render-init-gameboard";
 import Gameboard from "../gameboard-factory/gameboard-factory";
-import gameController from "../game-controller/game-controller";
 import getRandomNavy from "../random-coordinates/random-coordinates";
 import shipChoice from "../manual-coordinates/placement";
+import elementsDOM from "../game-DOM/elements-DOM";
+import gameController from "../game-controller/game-controller";
+
+// Create human and computer gameboards
+const humanGameboard = Gameboard();
+const computerGameboard = Gameboard();
 
 // Initialize Battleship Game
 const initGame = () => {
@@ -26,9 +31,9 @@ const initGame = () => {
     patrolBoat: Ship(2),
   };
 
-  // Create human and computer gameboards
+  /* // Create human and computer gameboards
   const humanGameboard = Gameboard();
-  const computerGameboard = Gameboard();
+  const computerGameboard = Gameboard(); */
 
   // Push humanNavy's ships into humanGameboard's allships array
   const humanNavyArray = Object.values(humanNavy);
@@ -41,20 +46,6 @@ const initGame = () => {
   computerNavyArray.forEach((ship) => {
     computerGameboard.allShips.push(ship);
   });
-
-  /*
-  // Set coordinates for human ships
-  humanGameboard.allShips[0].coords = [0, 1, 2, 3, 4];
-  humanGameboard.allShips[1].coords = [50, 60, 70, 80];
-  humanGameboard.allShips[2].coords = [67, 68, 69];
-  humanGameboard.allShips[3].coords = [97, 98, 99];
-  humanGameboard.allShips[4].coords = [18, 28];
-
-  // Place human ships on the gameboard
-  humanGameboard.allShips.forEach((ship) => {
-    humanGameboard.placeShip(ship);
-  });
-*/
 
   // Set random coordinates for computer ships
   const randomNavyCoords = getRandomNavy();
@@ -70,17 +61,21 @@ const initGame = () => {
   });
 
   // Select each gameboard's cases (100 cases/gameboard)
-  const humanGameboardCases = document.querySelectorAll("#human-gameboard .gameboard-array");
-  const computerGameboardCases = document.querySelectorAll("#computer-gameboard .gameboard-array");
+  const { humanGameboardCases, computerGameboardCases } = elementsDOM;
 
   // Render both gameboards
   renderInitGameboard(humanGameboard, humanGameboardCases);
   renderInitGameboard(computerGameboard, computerGameboardCases);
 
-  // Control the game
-  gameController(humanGameboard, computerGameboard);
+  // Set the DOM Ship Choice (click on one ship's name to place it on the gameboard)
+  shipChoice(humanGameboard);
 
-  shipChoice(humanGameboard, humanGameboardCases);
+  // Control the game
+  elementsDOM.humanGameboardContainer.addEventListener("click", (event) => {
+    const { target } = event; // Object destructuring
+    if (target.id !== "start-game-button") return;
+    gameController(humanGameboard, computerGameboard);
+  });
 };
 
 export default initGame;

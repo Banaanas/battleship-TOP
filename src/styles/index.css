@@ -109,7 +109,7 @@ h1 {
     max-height: 2rem;
 }
 
-.navy {
+#human-navy {
     margin-top: 2rem;
     font-size: 3rem;
     font-weight: bolder;
@@ -126,3 +126,8 @@ h1 {
     border: #fafafa solid 3px;
     cursor: pointer;
     overflow: hidden;}
+
+#rotate-ship-button, #start-game-button {
+    font-weight: bolder;
+    font-size: 1.8rem;
+}

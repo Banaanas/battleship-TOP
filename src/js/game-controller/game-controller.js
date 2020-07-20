@@ -4,7 +4,7 @@ import renderGameboard from "../game-DOM/render-gameboard";
 const gameController = (humanGameboard, computerGameboard) => {
   // Select each gameboard's cases (100 cases/gameboard)
   const computerGameboardCases = document.querySelectorAll("#computer-gameboard .gameboard-array");
-  const humanGameboardCases = document.querySelectorAll("#human-gameboard .gameboard-array");
+  const humanGameboardCases = document.querySelectorAll("#human-gameboard-grid-container .gameboard-array");
 
   // Add eventListener for each computer's gameboard's case
   computerGameboardCases.forEach((computerGridCase, index) => {

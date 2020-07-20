@@ -33,7 +33,6 @@ let previousAssignedCoords = [];
 const randomCoordinates = (shipLength, orientation) => {
   // Return undefined if shipLength is greater than 5 cases
   if (shipLength > 5) {
-    console.log("Ship length can not exceed 5 cases");
     return;
   }
 
@@ -104,6 +103,7 @@ const randomCoordinates = (shipLength, orientation) => {
   }
 
   // Return the random coordinates array
+  // eslint-disable-next-line consistent-return
   return coordsArr;
 };
 
