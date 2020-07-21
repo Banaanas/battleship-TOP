@@ -12,7 +12,20 @@
       <h1>Battleship</h1>
       <img src="./images/battleship.svg" alt="Battleship Icon" />
     </header>
+
     <main id="main">
+        <aside id="human-aside">
+            <div id="human-navy">
+                <div id="ship-choices">
+                    <div class="ship-div" id="carrier-choice">Carrier</div>
+                    <div class="ship-div" id="battleship-choice">Battleship</div>
+                    <div class="ship-div" id="destroyer-choice">Destroyer</div>
+                    <div class="ship-div" id="submarine-choice">Submarine</div>
+                    <div class="ship-div" id="patrol-boat-choice">Patrol Boat</div>
+                </div>
+                <button id="rotate-ship-button">ROTATE SHIP</button>
+            </div>
+        </aside>
       <div class="players-container" id="human-gameboard-container">
           <div class="grid-container" id="human-gameboard-grid-container">
               <span></span>
@@ -136,16 +149,6 @@
               <span class="gameboard-array">H10</span>
               <span class="gameboard-array">I10</span>
               <span class="gameboard-array">J10</span>
-          </div>
-          <div id="human-navy">
-              <div id="ship-choices">
-                  <span id="carrier-choice">Carrier</span>
-                  <span id="battleship-choice">Battleship</span>
-                  <span id="destroyer-choice">Destroyer</span>
-                  <span id="submarine-choice">Submarine</span>
-                  <span id="patrol-boat-choice">Patrol Boat</span>
-              </div>
-              <button id="rotate-ship-button">ROTATE SHIP</button>
           </div>
       </div>
       <div class="players-container">
@@ -273,6 +276,8 @@
               <span class="gameboard-array">J10</span>
           </div>
       </div>
+        <aside>
+        </aside>
     </main>
   </body>
 </html>

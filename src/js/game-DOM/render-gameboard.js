@@ -6,7 +6,6 @@ const renderGameboard = (gameboardObj, allGameboardCases) => {
   // Render all damages on the gameboard
   gameboardObj.allShips.forEach((ship) => {
     ship.damages.forEach((coord) => {
-      console.log(allGameboardCases[coord]);
       const img = document.createElement("img");
       img.src = explosionIcon;
       img.classList.add("explosion-icon");

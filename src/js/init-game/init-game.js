@@ -70,8 +70,9 @@ const initGame = () => {
   // Set the DOM Ship Choice (click on one ship's name to place it on the gameboard)
   shipChoice(humanGameboard);
 
-  // Control the game
-  elementsDOM.humanGameboardContainer.addEventListener("click", (event) => {
+  // Add Event Listener to future created Start Game Button
+  // Event Listener : Control the game
+  elementsDOM.humanAside.addEventListener("click", (event) => {
     const { target } = event; // Object destructuring
     if (target.id !== "start-game-button") return;
     gameController(humanGameboard, computerGameboard);

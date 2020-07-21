@@ -1,13 +1,17 @@
 // Ships DOM selectors
 const elementsDOM = {
+  humanAside: document.querySelector("#human-aside"),
   humanNavy: document.querySelector("#human-navy"),
   carrier: document.querySelector("#carrier-choice"),
   battleship: document.querySelector("#battleship-choice"),
   destroyer: document.querySelector("#destroyer-choice"),
   submarine: document.querySelector("#submarine-choice"),
   patrolBoat: document.querySelector("#patrol-boat-choice"),
+  allShips: document.querySelectorAll(".ship-div"),
   rotateShipButton: document.querySelector("#rotate-ship-button"),
-  humanGameboardCases: document.querySelectorAll("#human-gameboard-grid-container .gameboard-array"),
+  humanGameboardCases: document.querySelectorAll(
+    "#human-gameboard-grid-container .gameboard-array"
+  ),
   humanGameboardContainer: document.querySelector("#human-gameboard-container"),
   humanGameboardGridContainer: document.querySelector("#human-gameboard-grid-container"),
   computerGameboardCases: document.querySelectorAll("#computer-gameboard .gameboard-array"),

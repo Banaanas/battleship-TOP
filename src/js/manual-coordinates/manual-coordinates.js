@@ -4,7 +4,15 @@ import elementsDOM from "../game-DOM/elements-DOM";
 
 /** * Placement Object ** */
 const placement = {
-  clickAgain: false,
+  // When shipPlaced is true, it blocks the spectral ship (when case is hovered)
+  // to appear. It also block the click Event Listener setShipCoordinates to happen.
+  // This last one is attached every time a case is hovered. So when a case was hovered
+  // multiple times, then clicked, a same ship was also attached multiple times.
+  // shipsToPlace reached 0 faster than normal (because of the -1 subtraction
+  // happening multiple times) and the game started without other ships been
+  // located. Also it blocks setShipCoordinates to happen, and the same ship from
+  // being placed after it already has been.
+  shipPlaced: false,
   orientation: "horizontal",
   shipsToPlace: 5, // How many ships remain to place
   // Store the clicked ship's name, to make it invisible when ship's been placed
@@ -26,46 +34,57 @@ const placement = {
     [90, 99],
   ],
 
-  // Hide the rotate ship button when all ships have been placed
-  hideRotateShipButton() {
+  // Display start game button when all ships have been placed
+  displayStartGameButton() {
     if (placement.shipsToPlace === 0) {
-      // Create a <button> element
+      // Create the <button> element
       const startGameButton = document.createElement("button");
       startGameButton.setAttribute("id", "start-game-button");
       startGameButton.innerHTML = "START THE GAME";
+      // Remove the human navy div (where all DOM ships were)
       elementsDOM.humanNavy.remove();
-      elementsDOM.humanGameboardContainer.appendChild(startGameButton);
+      // Attach the startGameButton where human navy div was
+      elementsDOM.humanAside.appendChild(startGameButton);
     }
   },
 
+  // Deleted previous gameboard (all cases) and create a new one
+  // This way, all event listeners previously attached to all grid cases
+  // are erased (too complicated to removeEventListener for everyone of them
+  // because of nested addEventListeners - and displaySpectralShip and
+  // setShipCoordinates needed only 1 event listener / case).
   renewGridCases(gameboardObj) {
     elementsDOM.humanGameboardGridContainer.innerHTML = "";
     elementsDOM.humanGameboardGridContainer.innerHTML = elementsDOM.gridHTML;
     const humanGameboardCases = document.querySelectorAll("#human-gameboard-grid-container .gameboard-array");
+    // Display already placed ships
     renderInitGameboard(gameboardObj, humanGameboardCases);
   },
 
   // Set the ship's coordinates when gameboard case clicked
   setShipCoordinates(gameboardObj, ship, coordsArr) {
-    if (this.clickAgain === true) return; // Return if ship already placed
+    if (this.shipPlaced === true) return; // Return if ship already placed
     gameboardObj.allShips[ship].coords = coordsArr;
     // Place each ship present in the allShips array
     gameboardObj.allShips.forEach((gameboardShip) => {
       gameboardObj.placeShip(gameboardShip);
     });
-    console.log(gameboardObj);
     // Hide the DOM Ship choice
     this.shipDOMSelected.style.visibility = "hidden";
     // If no more ships to place, hide rotate ship button
     this.shipsToPlace -= 1;
-    this.hideRotateShipButton();
-    this.clickAgain = true;
+    this.displayStartGameButton();
+
+    // Set shipPlaced to true
+    this.shipPlaced = true;
   },
 
   // Display a spectral ship after the player clicked on one DOM Ship choice
   displaySpectralShip(shipRangeMinNumber, gameboardObj) {
     // Return if the ship has already been placed (click)
-    if (placement.clickAgain === true) return;
+    // This way, the spectral ship does'nt appear anymore after
+    // ship has been placed
+    if (placement.shipPlaced === true) return;
 
     // Store the spectralShip coordinates
     const spectralShipCoords = [];
