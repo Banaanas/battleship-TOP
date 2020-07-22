@@ -1,5 +1,10 @@
-const Gameboard = () => ({
-  gameGrid: Array(100).fill(false),
+import elementsDOM from "../game-DOM/elements-DOM";
+import { dontStrikeTwiceMessage } from "../game-DOM/game-messages";
+
+const Gameboard = (playerName) => ({
+  playerName,
+  gameGrid: Array(100)
+    .fill(false),
   allShips: [],
   missedShots: [],
   previousAttacks: [], // Store all enemy's previous attacks
@@ -52,7 +57,8 @@ const Gameboard = () => ({
     this.duplicateStrike = false; // Reset duplicateStrike if modified before
 
     if (enemyBoard.previousAttacks.includes(coord)) {
-      console.log("Can't attack same position twice");
+      // displayDontStrikeTwiceMessage();
+      dontStrikeTwiceMessage();
       // eslint-disable-next-line max-len
       this.duplicateStrike = true; // Make impossible for computer to play after human made a duplicate strike - cf. gameController
       return false;
@@ -72,8 +78,12 @@ const Gameboard = () => ({
         for (const coordinate of ship.coords) {
           if (coord === coordinate) {
             ship.hit(coord); // hit function, generating damages on the ship
-            // Check if game is over
-            if (this.allShipsSunk() === true) { console.log("gameIsOver"); }
+
+            // Check if game is over and display the Winner's Name
+            if (this.allShipsSunk() === true) {
+              elementsDOM.gameMessage.style.visibility = "visible";
+              elementsDOM.gameMessage.textContent = `${enemyBoard.playerName} is the Winner`;
+            }
             return true;
           }
         }
@@ -86,28 +96,3 @@ const Gameboard = () => ({
 });
 
 export default Gameboard;
-
-/* // Check for duplicate attack in missedshots array
-if (this.missedShots.includes(coord)) {
-  console.log("Can't attack same position twice");
-  // eslint-disable-next-line max-len
-  this.duplicateStrike = true; //
-  Make impossible for computer to play after human made a duplicate strike - cf. gameController
-  return false;
-} */
-
-/* // Check for duplicate attack in all ships damages array
-const allDamagesAllShipsArray = [];
-this.allShips.forEach((ship) => {
-  ship.damages.forEach((damageCoord) => {
-    allDamagesAllShipsArray.push(damageCoord);
-  });
-}); */
-
-/* if (allDamagesAllShipsArray.includes(coord)) {
-  console.log("Can't attack same position twice");
-  // eslint-disable-next-line max-len
-  this.duplicateStrike = true; //
-  Make impossible for computer to play after human made a duplicate strike - cf. gameController
-  return false;
-} */

@@ -1,5 +1,9 @@
 import renderInitGameboard from "../game-DOM/render-init-gameboard";
 import elementsDOM from "../game-DOM/elements-DOM";
+import {
+  displayclickStartButtonMessage,
+  waitMessage,
+} from "../game-DOM/game-messages";
 // import gameController from "../game-controller/game-controller";
 
 /** * Placement Object ** */
@@ -37,14 +41,32 @@ const placement = {
   // Display start game button when all ships have been placed
   displayStartGameButton() {
     if (placement.shipsToPlace === 0) {
+      // Remove event listener attached to computerGameboard during
+      // manual placement phase ("Place all ships before" Message)
+      elementsDOM.computerGameboardCases.forEach((item) => {
+        item.removeEventListener("click", waitMessage);
+      });
+
       // Create the <button> element
       const startGameButton = document.createElement("button");
       startGameButton.setAttribute("id", "start-game-button");
       startGameButton.innerHTML = "START THE GAME";
+
       // Remove the human navy div (where all DOM ships were)
-      elementsDOM.humanNavy.remove();
-      // Attach the startGameButton where human navy div was
-      elementsDOM.humanAside.appendChild(startGameButton);
+      elementsDOM.allShips.forEach((item) => {
+        item.remove();
+      });
+
+      // Remove shipChoices div and Rotate Ship Button
+      elementsDOM.shipChoices.remove();
+      elementsDOM.rotateShipButton.remove();
+
+      // Attach the startGameButton where Rotate Ship Button was
+      elementsDOM.humanNavy.insertBefore(startGameButton, elementsDOM.resetGameButton);
+
+      // Add Event Listener - After startGameButton appears but not clicked,
+      // ask to click startGameButton if User clicks on the computer gameboard
+      displayclickStartButtonMessage();
     }
   },
 
@@ -77,6 +99,14 @@ const placement = {
 
     // Set shipPlaced to true
     this.shipPlaced = true;
+
+    // Change pointer cursor to default cursor on all human gameboard cases
+    const humanGameboardCases = document.querySelectorAll(
+      "#human-gameboard-grid-container .gameboard-array"
+    );
+    humanGameboardCases.forEach((item) => {
+      item.style.cursor = "default";
+    });
   },
 
   // Display a spectral ship after the player clicked on one DOM Ship choice
@@ -117,10 +147,12 @@ const placement = {
       }
 
       // Display horizontal spectral ship if maximum not exceeded and coords are not occupied
-      const humanGameboardCases = document.querySelectorAll("#human-gameboard-grid-container .gameboard-array");
+      const humanGameboardCases = document.querySelectorAll(
+        "#human-gameboard-grid-container .gameboard-array"
+      );
       humanGameboardCases.forEach((item, index) => {
         if ((index >= shipRangeMinNumber) && (index < shipRangeMinNumber + this.shipLength)) {
-          item.style.backgroundColor = "red";
+          item.style.backgroundColor = "var(--primary-dark-color)";
         }
       });
     }
@@ -146,14 +178,18 @@ const placement = {
 
       // Display vertical spectral ship if maximum not exceeded and coords are not occupied
       for (let index = shipRangeMinNumber; index <= shipRangeMaxNumber; index += 10) {
-        const humanGameboardCases = document.querySelectorAll("#human-gameboard-grid-container .gameboard-array");
-        humanGameboardCases[index].style.backgroundColor = "red";
+        const humanGameboardCases = document.querySelectorAll(
+          "#human-gameboard-grid-container .gameboard-array"
+        );
+        humanGameboardCases[index].style.backgroundColor = "var(--primary-dark-color)";
       }
     }
 
     // Add Ship's Placement Event Listener IF SPECTRAL SHIP WAS DISPLAYED
     // If ship was not displayed, it means ship placement was not possible
-    const humanGameboardCases = document.querySelectorAll("#human-gameboard-grid-container .gameboard-array");
+    const humanGameboardCases = document.querySelectorAll(
+      "#human-gameboard-grid-container .gameboard-array"
+    );
     humanGameboardCases[shipRangeMinNumber].addEventListener("click", () => {
       this.setShipCoordinates(gameboardObj, this.allShipsIndex, spectralShipCoords);
     });
@@ -161,7 +197,9 @@ const placement = {
 
   // Make spectral ship disappear when mouse get out of the case
   eraseSpectralShip(gbrdObj, gbrdCases) {
-    const humanGameboardCases = document.querySelectorAll("#human-gameboard-grid-container .gameboard-array");
+    const humanGameboardCases = document.querySelectorAll(
+      "#human-gameboard-grid-container .gameboard-array"
+    );
     humanGameboardCases.forEach((item) => {
       item.style.backgroundColor = "var(--primary-light-color)";
     });

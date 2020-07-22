@@ -35,8 +35,13 @@ const shipChoice = (gamebrdObj) => {
     placement.shipLength = 5;
     placement.allShipsIndex = 0;
     placement.renewGridCases(gamebrdObj);
-    const gamebrdCases = document.querySelectorAll("#human-gameboard-grid-container .gameboard-array");
+    const gamebrdCases = document.querySelectorAll(
+      "#human-gameboard-grid-container .gameboard-array"
+    );
     setSpectralShipProcess(gamebrdObj, gamebrdCases);
+    gamebrdCases.forEach((item) => {
+      item.style.cursor = "pointer";
+    });
   });
 
   // Battleship event listener
@@ -46,8 +51,13 @@ const shipChoice = (gamebrdObj) => {
     placement.shipLength = 4;
     placement.allShipsIndex = 1;
     placement.renewGridCases(gamebrdObj);
-    const gamebrdCases = document.querySelectorAll("#human-gameboard-grid-container .gameboard-array");
+    const gamebrdCases = document.querySelectorAll(
+      "#human-gameboard-grid-container .gameboard-array"
+    );
     setSpectralShipProcess(gamebrdObj, gamebrdCases);
+    gamebrdCases.forEach((item) => {
+      item.style.cursor = "pointer";
+    });
   });
 
   // Destroyer event listener
@@ -57,8 +67,13 @@ const shipChoice = (gamebrdObj) => {
     placement.shipLength = 3;
     placement.allShipsIndex = 2;
     placement.renewGridCases(gamebrdObj);
-    const gamebrdCases = document.querySelectorAll("#human-gameboard-grid-container .gameboard-array");
+    const gamebrdCases = document.querySelectorAll(
+      "#human-gameboard-grid-container .gameboard-array"
+    );
     setSpectralShipProcess(gamebrdObj, gamebrdCases);
+    gamebrdCases.forEach((item) => {
+      item.style.cursor = "pointer";
+    });
   });
 
   // Submarine event listener
@@ -68,8 +83,13 @@ const shipChoice = (gamebrdObj) => {
     placement.shipLength = 3;
     placement.allShipsIndex = 3;
     placement.renewGridCases(gamebrdObj);
-    const gamebrdCases = document.querySelectorAll("#human-gameboard-grid-container .gameboard-array");
+    const gamebrdCases = document.querySelectorAll(
+      "#human-gameboard-grid-container .gameboard-array"
+    );
     setSpectralShipProcess(gamebrdObj, gamebrdCases);
+    gamebrdCases.forEach((item) => {
+      item.style.cursor = "pointer";
+    });
   });
 
   // Patrol Boat event listener
@@ -79,8 +99,13 @@ const shipChoice = (gamebrdObj) => {
     placement.shipLength = 2;
     placement.allShipsIndex = 4;
     placement.renewGridCases(gamebrdObj);
-    const gamebrdCases = document.querySelectorAll("#human-gameboard-grid-container .gameboard-array");
+    const gamebrdCases = document.querySelectorAll(
+      "#human-gameboard-grid-container .gameboard-array"
+    );
     setSpectralShipProcess(gamebrdObj, gamebrdCases);
+    gamebrdCases.forEach((item) => {
+      item.style.cursor = "pointer";
+    });
   });
 
   // Change the spectral ship and real ship orientation

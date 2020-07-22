@@ -24,7 +24,8 @@ describe("player-factory Factory", () => {
     expect(computerGameboard.allShips[0].damages)
       .toContain(14);
     expect(computerGameboard.allShips[0].damages)
-      .not.toContain(15);
+      .not
+      .toContain(15);
     expect(computerGameboard.missedShots)
       .toContain(15);
   });

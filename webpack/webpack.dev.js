@@ -32,7 +32,7 @@ module.exports = merge(common, {
     port: 8080,
     before(app, server) {
       server._watch(`src/template.html`);
-    }
+    },
   },
 
   plugins: [
@@ -43,4 +43,4 @@ module.exports = merge(common, {
      */
     new webpack.HotModuleReplacementPlugin(),
   ],
-})
+});
