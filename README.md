@@ -66,7 +66,7 @@ One important
 
 
 #### Principal Features
-- Human Player vs. Computer Player
+- Human Player vs. Computer Player ;
 - Manual ship placement (Human Player) ;
 - Random ship placement (Computer Player) ;
 - Great User Interface ;
@@ -159,7 +159,6 @@ Project Link: [https://github.com/Banaanas/battleship-TOP](https://github.com/Ba
 - [The Odin Project](https://www.theodinproject.com/)
 - [GitHub Pages](https://pages.github.com)
 - [Flaticon](https://www.flaticon.com/)
-- [Material Icons](https://material.io/resources/icons/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
