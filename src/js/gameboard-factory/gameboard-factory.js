@@ -83,6 +83,7 @@ const Gameboard = (playerName) => ({
             if (this.allShipsSunk() === true) {
               elementsDOM.gameMessage.style.visibility = "visible";
               elementsDOM.gameMessage.textContent = `${enemyBoard.playerName} is the Winner`;
+              elementsDOM.resetGameButton.textContent = " PLAY AGAIN";
             }
             return true;
           }
