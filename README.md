@@ -56,6 +56,7 @@
 
 ## About the Project
 Battleship Game achieved as part of <a href="https://www.theodinproject.com/courses/javascript/lessons/battleship">The Odin Project - JavaScript curriculum</a>.
+One important 
 
 <p align="center">
   <a href="https://banaanas.github.io/my-weather-app/">
@@ -81,7 +82,7 @@ Battleship Game achieved as part of <a href="https://www.theodinproject.com/cour
 
 - [Vanilla JavaScript](http://vanilla-js.com/)
 
-ES6 - Factory Functions - Random Ship Placement algorithm
+ES6 - Factory Functions - Random Ship Placement algorithm - Async / Await
 Test-driven development (TDD) - Jest
 - [HTML5](https://www.w3.org/html/)
 - [CSS3](https://www.w3.org/Style/CSS/Overview.html)
