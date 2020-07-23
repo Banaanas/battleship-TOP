@@ -70,7 +70,7 @@ One important
 - Manual ship placement (Human Player) ;
 - Random ship placement (Computer Player) ;
 - Great User Interface ;
-- Responsive design
+- Responsive design.
 
 <p align="center">
   <a href="https://banaanas.github.io/my-weather-app/">
@@ -83,7 +83,8 @@ One important
 - [Vanilla JavaScript](http://vanilla-js.com/)
 
 ES6 - Factory Functions - Random Ship Placement algorithm - Async / Await
-Test-driven development (TDD) - Jest
+
+Test-Driven Development (TDD) - Jest
 - [HTML5](https://www.w3.org/html/)
 - [CSS3](https://www.w3.org/Style/CSS/Overview.html)
 
