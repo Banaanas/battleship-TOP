@@ -55,7 +55,7 @@
 <!-- TABLE OF CONTENTS -->
 
 ## About the Project
-Weather Application achieved as part of <a href="https://www.theodinproject.com/courses/javascript/lessons/weather-app">The Odin Project - JavaScript curriculum</a>.
+Battleship Game achieved as part of <a href="https://www.theodinproject.com/courses/javascript/lessons/battleship">The Odin Project - JavaScript curriculum</a>.
 
 <p align="center">
   <a href="https://banaanas.github.io/my-weather-app/">
@@ -65,10 +65,11 @@ Weather Application achieved as part of <a href="https://www.theodinproject.com/
 
 
 #### Principal Features
-- Weather by city (autocomplete search) ;
-- Geolocation / Default Location (Paris) ;
-- Current Day : current weather, current temperature, maximum and minimum daily temperatures ;
-- Forecast Weather : five days forecast weather.
+- Human Player vs. Computer Player
+- Manual ship placement (Human Player) ;
+- Random ship placement (Computer Player) ;
+- Great User Interface ;
+- Responsive design
 
 <p align="center">
   <a href="https://banaanas.github.io/my-weather-app/">
@@ -80,21 +81,19 @@ Weather Application achieved as part of <a href="https://www.theodinproject.com/
 
 - [Vanilla JavaScript](http://vanilla-js.com/)
 
-ES6 - Geolocation - Set Object
+ES6 - Factory Functions - Random Ship Placement algorithm
+Test-driven development (TDD) - Jest
 - [HTML5](https://www.w3.org/html/)
 - [CSS3](https://www.w3.org/Style/CSS/Overview.html)
 
-Responsive Design - Flexbox - Media Queries
-TDD - Jest
+Grid - Flexbox - Media Queries
+
+- [Jest](https://jestjs.io/)
 - [Webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
 - [core-js](https://github.com/zloirock/core-js)
 - [ESLint](https://eslint.org/)
 - [stylelint](https://stylelint.io/)
-- [Algolia Places](https://community.algolia.com/places/documentation.html)
-- [Reverse Geocoding | Maps JavaScript API ](https://developers.google.com/maps/documentation/geocoding/intro)
-- [OpenWeatherMap](https://openweathermap.org/api)
-- [axios](https://github.com/axios/axios)
 
 
 <!-- GETTING STARTED -->
@@ -148,7 +147,7 @@ Distributed under the MIT License. See <a href="./LICENCE.txt">`LICENSE`</a> for
 
 Cyrilo - [Personal Website](https://yetToCome) - cyrildeveloppeur@gmail.com
 
-Project Link: [https://github.com/Banaanas/my-weather-app](https://github.com/Banaanas/my-weather-app)
+Project Link: [https://github.com/Banaanas/battleship-TOP](https://github.com/Banaanas/battleship-TOP)
 
 
 <!-- ACKNOWLEDGEMENTS -->
