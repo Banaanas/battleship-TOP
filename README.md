@@ -60,7 +60,7 @@ One important
 
 <p align="center">
   <a href="https://banaanas.github.io/my-weather-app/">
-    <img src="src/images/README/screenshot-1.png" alt="Screenshot" width="455" height="350">
+    <img src="src/images/README/screenshot-1.png" alt="Screenshot" width="455" height="300">
   </a>
 </p>
 
@@ -74,7 +74,7 @@ One important
 
 <p align="center">
   <a href="https://banaanas.github.io/my-weather-app/">
-    <img src="src/images/README/screenshot-2.png" alt="Screenshot" width="300" height="500">
+    <img src="src/images/README/screenshot-2.png" alt="Screenshot" width="281" height="500">
   </a>
 </p>
 
