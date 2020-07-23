@@ -26,15 +26,15 @@
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
-    <a href="https://banaanas.github.io/my-weather-app/">
+    <a href="https://github.com/Banaanas/battleship-TOP">
         <img src="./src/images/README/project-logo.svg" alt="Project's Logo" width="80" height="80">
     </a>
 </p>
 
-<h1 align="center">:snowflake: Battleship :cloud:</h1>
+<h1 align="center">:medal_military: Battleship :bomb:</h1>
 
 <p align="center">
-    Simple, elegant and efficient Weather Application.<br/><br/>
+    Simple, elegant and funny BattleShip Game.<br/><br/>
     <a href="https://banaanas.github.io/my-weather-app/">:computer: Live Demo :eyes:</a><br/><br/>
 </p>
 
