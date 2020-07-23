@@ -1,16 +1,12 @@
 // Create Human and Computer's navies
 import Ship from "../ship-factory/ships-factory";
-import renderInitGameboard from "../game-DOM/render-init-gameboard";
 import Gameboard from "../gameboard-factory/gameboard-factory";
 import getRandomNavy from "../random-coordinates/random-coordinates";
 import shipChoice from "../manual-coordinates/placement";
 import elementsDOM from "../game-DOM/elements-DOM";
 import gameController from "../game-controller/game-controller";
 import placement from "../manual-coordinates/manual-coordinates";
-import {
-  clickStartButtonMessage,
-  displayWaitMessage,
-} from "../game-DOM/game-messages";
+import { clickStartButtonMessage, displayWaitMessage } from "../game-DOM/game-messages";
 import setResetGameButton from "../game-DOM/reset-game-button";
 
 // Create human and computer gameboards
@@ -63,11 +59,7 @@ const initGame = () => {
   });
 
   // Select each gameboard's cases (100 cases/gameboard)
-  const { humanGameboardCases, computerGameboardCases } = elementsDOM;
-
-  // Render both gameboards
-  renderInitGameboard(humanGameboard, humanGameboardCases);
-  renderInitGameboard(computerGameboard, computerGameboardCases);
+  const { computerGameboardCases } = elementsDOM;
 
   // Set the DOM Ship Choice (click on one ship's name to place it on the gameboard)
   shipChoice(humanGameboard);
@@ -93,6 +85,8 @@ const initGame = () => {
     // Remove Start Game Button
     const startGameButton = document.querySelector("#start-game-button");
     startGameButton.remove();
+
+    elementsDOM.resetGameButton.borderColor = "var(--secondary-text-color)";
 
     // Remove clickStartButtonMessage Event Listener attached to computerGameboard during
     // when startGameButton appears

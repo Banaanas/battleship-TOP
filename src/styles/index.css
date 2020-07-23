@@ -8,10 +8,11 @@ html {
     box-sizing: border-box;
     height: 100%;
     font-size: 62.5%;
-    --primary-color: #1976d2;
-    --primary-light-color: #63a4ff;
-    --primary-dark-color: #004ba0;
+    --primary-color: #546e7a;
+    --primary-light-color: #819ca9;
+    --primary-dark-color: #29434e;
     --primary-text-color: #fafafa;
+    --secondary-text-color: #db7093;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    min-width: 300px;
     min-height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--primary-color);
@@ -32,7 +34,7 @@ header {
     height: 10rem;
     min-height: 10vh;
     overflow: hidden;
-    background-color: var(--primary-dark-color);
+    background-color: var(--primary-light-color);
     border-bottom: solid 3px var(--primary-text-color);
 }
 
@@ -45,23 +47,29 @@ header {
     transform: scaleX(-1);
 }
 
+#battleship-icon-3 {
+    width: 10rem;
+}
+
 /* Title */
 h1 {
     width: auto;
-    color: var(--primary-text-color);
-    font-size: 5rem !important; /* normalize.css is applied to h1 */
+    color: var(--secondary-text-color);
+    font-size: 5rem;
     letter-spacing: 1rem;
     text-align: center;
     text-transform: uppercase;
-    text-shadow: 2px 2px #63a4ff;
+    text-shadow: 2px 2px var(--primary-dark-color);
+    cursor: default;
 }
 
 #main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: 90vh;
+    min-height: 700px;
     overflow: hidden;
     text-align: center;
 }
@@ -80,7 +88,9 @@ h1 {
     font-size: 3rem;
     text-transform: uppercase;
     background-color: var(--primary-text-color);
+    border: solid 3px var(--primary-dark-color);
     border-radius: 3px;
+    cursor: default;
 }
 
 .fleets-icon {
@@ -96,6 +106,7 @@ aside {
     width: 30rem;
     min-width: 30rem;
     height: 100%;
+    overflow: hidden;
 }
 
 /* Game Message */
@@ -106,20 +117,13 @@ aside {
     justify-content: center;
     width: 80%;
     height: 10rem;
-    margin-top: 3rem;
     color: var(--primary-dark-color);
     font-weight: bolder;
     font-size: 2.5rem;
     text-transform: uppercase;
     vertical-align: center;
     background: none;
-    /*
-    background-color: var(--primary-text-color);
-    */
     border-radius: 3px;
-    /*
-    visibility: hidden;
-    */
     cursor: default;
 }
 
@@ -137,8 +141,6 @@ aside {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(11, minmax(4rem, 1fr));
-    /*width: 80%;
-      height: 60%;*/
     overflow: hidden;
     border: solid 8px var(--primary-dark-color);
     border-radius: 5px;
@@ -148,11 +150,11 @@ aside {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     overflow: hidden;
     font-weight: bolder;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     background-color: var(--primary-light-color);
     border: solid 1px var(--primary-text-color);
     cursor: default;
@@ -160,13 +162,13 @@ aside {
 
 /* A - J */
 .grid-container span:nth-child(-n + 11) {
-    background-color: pink;
+    background-color: var(--secondary-text-color);
     cursor: default;
 }
 
 /* 1 - 10 */
 .grid-container span:nth-child(11n + 12) {
-    background-color: palevioletred;
+    background-color: var(--secondary-text-color);
     cursor: default;
 }
 
@@ -190,16 +192,17 @@ aside {
 #ship-choices {
     display: flex;
     flex-direction: column;
+    margin-top: 3rem;
     padding: 1rem;
-    background-color: #004ba0;
-    border: solid 2px var(--primary-text-color);
+    color: var(--primary-dark-color);
+    background-color: var(--secondary-text-color);
+    border: solid 3px var(--primary-dark-color);
     border-radius: 3px;
 }
 
 /* Ships' names */
 .ship-div {
     margin-bottom: 1rem;
-    color: var(--primary-text-color);
     font-weight: bolder;
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -209,42 +212,45 @@ aside {
 }
 
 .ship-div:hover {
-    color: rgba(250, 250, 250, 0.8);
-    border: 3px solid rgba(250, 250, 250, 0.8);
+    color: rgba(41, 67, 78, 0.8);
+    border: 3px solid rgba(41, 67, 78, 0.8);
 }
 
 .ship-div-clicked {
     background-color: var(--primary-light-color);
-    border: 3px solid var(--primary-text-color);
+    border: 3px solid var(--primary-dark-color);
 }
 
 /* Rotate and Start Game Buttons*/
 #rotate-ship-button,
 #start-game-button,
 #reset-game-button {
-    color: var(--primary-dark-color);
+    color: var(--primary-text-color);
     font-weight: bolder;
-    background-color: var(--primary-text-color);
-    border: solid 3px var(--primary-dark-color);
+    background-color: var(--primary-dark-color);
+    border: solid 3px var(--primary-text-color);
     border-radius: 5px;
     cursor: pointer;
     transition: color, background-color 0.7s ease-out;
 }
 
 #reset-game-button {
-    color: var(--primary-text-color);
+    color: var(--secondary-text-color);
     background-color: var(--primary-dark-color);
 }
 
 #start-game-button {
+    margin-top: 3rem;
     padding: 1.5rem;
     font-size: 2.5rem;
+    border-color: var(--secondary-text-color);
 }
 
 #rotate-ship-button {
     margin-top: 3rem;
     padding: 2rem;
     font-size: 2rem;
+    border-color: var(--secondary-text-color);
 }
 
 #reset-game-button {
@@ -304,8 +310,131 @@ aside {
 }
 
 /* Strike Images */
-.explosion-icon,
-.sea-icon {
+.explosion-icon {
+    width: 4rem;
+}
+
+.missed-shot-icon {
     width: 2.8rem;
-    max-height: 2rem;
+}
+
+
+/*** MEDIA QUERIES - Max Width - 1200px***/
+
+@media only screen and (max-width: 1200px) {
+
+    #header {
+        height: 10%;
+    }
+
+    #main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 90%;
+    }
+
+    #game-tools-aside {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    #human-navy {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+
+    #reset-game-button,
+    #rotate-ship-button,
+    #start-game-button {
+        font-size: 1.5rem;
+    }
+
+    .ship-div {
+        font-size: 1.5rem;
+    }
+
+    #game-message {
+        position: fixed;
+        bottom: 5%;
+        width: 30%;
+        font-size: 2rem;
+        border: 3px solid var(--primary-dark-color);
+        visibility: hidden;
+    }
+
+    .players-container {
+        margin-top: 3rem;
+    }
+}
+
+
+/*** MEDIA QUERIES - Max Width - 700px***/
+
+@media only screen and (max-width: 700px) {
+
+    h1 {
+        font-size: 2rem;
+        letter-spacing: .2rem;
+    }
+
+    .header-icons {
+        width: 6rem;
+    }
+
+    #main {
+        min-height: auto;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(11, minmax(2rem, 1fr));
+        border: solid 8px var(--primary-dark-color);
+    }
+
+    .fleets-names {
+        font-size: 1.2rem;
+    }
+
+    .fleets-icon {
+        width: 4rem;
+    }
+
+    .grid-container span {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.5rem;
+    }
+
+    #game-message {
+        position: fixed;
+        bottom: 10%;
+        width: 30%;
+        font-size: 1.5rem;
+        visibility: hidden;
+    }
+
+    .ship-div {
+        font-size: 1rem;
+    }
+
+    /* Rotate and Start Game Buttons*/
+    #rotate-ship-button,
+    #start-game-button,
+    #reset-game-button {
+        padding: 1rem;
+       font-size: 1rem;
+    }
+
+    /* Strike Images */
+    .explosion-icon {
+        width: 1.8rem;
+    }
+
+    .missed-shot-icon {
+        width: 1rem;
+    }
+
 }

@@ -10,7 +10,9 @@ const setMessageDelay = () => {
 // Display Wait Message
 const waitMessage = () => {
   elementsDOM.gameMessage.style.visibility = "visible";
-  elementsDOM.gameMessage.style.backgroundColor = "var(--primary-text-color)";
+  elementsDOM.gameMessage.style.backgroundColor = "var(--secondary-text-color)";
+  elementsDOM.gameMessage.style.color = "var(--primary-dark-color)";
+  elementsDOM.gameMessage.style.border = "solid 3px var(--primary-dark-color)";
   elementsDOM.gameMessage.textContent = "Place All Your Ships";
   setMessageDelay();
 };
@@ -25,6 +27,9 @@ const displayWaitMessage = () => {
 // Display "Don't strike twice" Message
 const dontStrikeTwiceMessage = () => {
   elementsDOM.gameMessage.style.visibility = "visible";
+  elementsDOM.gameMessage.style.backgroundColor = "var(--secondary-text-color)";
+  elementsDOM.gameMessage.style.color = "var(--primary-dark-color)";
+  elementsDOM.gameMessage.style.border = "solid 3px var(--primary-dark-color)";
   elementsDOM.gameMessage.textContent = "Position already hit";
   setMessageDelay();
 };
@@ -32,6 +37,9 @@ const dontStrikeTwiceMessage = () => {
 // Display "Click startGameButton" Message
 const clickStartButtonMessage = () => {
   elementsDOM.gameMessage.style.visibility = "visible";
+  elementsDOM.gameMessage.style.backgroundColor = "var(--secondary-text-color)";
+  elementsDOM.gameMessage.style.color = "var(--primary-dark-color)";
+  elementsDOM.gameMessage.style.border = "solid 3px var(--primary-dark-color)";
   elementsDOM.gameMessage.textContent = "Click the Start Game Button";
   setMessageDelay();
 };

@@ -1,4 +1,4 @@
-import seaIcon from "../../images/sea.svg";
+import missedShotIcon from "../../images/missedShot.svg";
 import explosionIcon from "../../images/explosion.svg";
 
 // Render the gameboard after each player's turn
@@ -9,7 +9,7 @@ const renderGameboard = (gameboardObj, allGameboardCases) => {
       const img = document.createElement("img");
       img.src = explosionIcon;
       img.classList.add("explosion-icon");
-      allGameboardCases[coord].style.backgroundColor = "red";
+      allGameboardCases[coord].style.backgroundColor = "var(--primary-text-color)";
       allGameboardCases[coord].innerHTML = "";
       allGameboardCases[coord].appendChild(img);
     });
@@ -18,8 +18,9 @@ const renderGameboard = (gameboardObj, allGameboardCases) => {
   // Render all missed shots on the gameboard
   gameboardObj.missedShots.forEach((missedShot) => {
     const img = document.createElement("img");
-    img.src = seaIcon;
-    img.classList.add("sea-icon");
+    img.src = missedShotIcon;
+    img.classList.add("missed-shot-icon");
+    allGameboardCases[missedShot].style.backgroundColor = "var(--primary-dark-color)";
     allGameboardCases[missedShot].innerHTML = "";
     allGameboardCases[missedShot].appendChild(img);
   });
