@@ -1,420 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Battleship</title>
-</head>
+  </head>
 
-<body>
-<header>
-    <img class="header-icons" src="./images/battleship.svg" alt="Battleship Icon"/>
-    <h1>Battleship</h1>
-    <img class="header-icons" id="battleship-icon-2" src="./images/battleship-2.svg" alt="Battleship Icon"/>
-</header>
+  <body>
+    <header>
+      <img
+        class="header-icons"
+        src="./images/battleship.svg"
+        alt="Battleship Icon"
+      />
+      <h1>Battleship</h1>
+      <img
+        class="header-icons"
+        id="battleship-icon-2"
+        src="./images/battleship-2.svg"
+        alt="Battleship Icon"
+      />
+    </header>
 
-<main id="main">
-    <div class="players-container" id="human-gameboard-container">
+    <main id="main">
+      <div class="players-container" id="human-gameboard-container">
         <div class="fleets-names-containers">
-            <h2 class="fleets-names">Human Navy</h2>
-            <img class="fleets-icon" src="./images/humans.svg" alt="Icon of Humans Fleet">
+          <h2 class="fleets-names">Human Navy</h2>
+          <img
+            class="fleets-icon"
+            src="./images/humans.svg"
+            alt="Icon of Humans Fleet"
+          />
         </div>
         <div class="grid-container" id="human-gameboard-grid-container">
-            <span></span>
-            <span>A</span>
-            <span>B</span>
-            <span>C</span>
-            <span>D</span>
-            <span>E</span>
-            <span>F</span>
-            <span>G</span>
-            <span>H</span>
-            <span>I</span>
-            <span>J</span>
-            <span>1</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>2</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>3</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>4</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>5</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>6</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>7</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>8</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>9</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>10</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
+          <span></span>
+          <span>A</span>
+          <span>B</span>
+          <span>C</span>
+          <span>D</span>
+          <span>E</span>
+          <span>F</span>
+          <span>G</span>
+          <span>H</span>
+          <span>I</span>
+          <span>J</span>
+          <span>1</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>2</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>3</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>4</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>5</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>6</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>7</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>8</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>9</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>10</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
         </div>
-    </div>
-    <aside id="game-tools-aside">
+      </div>
+      <aside id="game-tools-aside">
         <section id="game-message">
-            <img class="header-icons" id="battleship-icon-3" src="./images/battleship-3.svg" alt="Battleship Icon"/>
+          <img
+            class="header-icons"
+            id="battleship-icon-3"
+            src="./images/battleship-3.svg"
+            alt="Battleship Icon"
+          />
         </section>
 
         <div id="human-navy">
-            <button id="rotate-ship-button">ROTATE SHIP</button>
-            <div id="ship-choices">
-                <div class="ship-div" id="carrier-choice">Carrier</div>
-                <div class="ship-div" id="battleship-choice">Battleship</div>
-                <div class="ship-div" id="destroyer-choice">Destroyer</div>
-                <div class="ship-div" id="submarine-choice">Submarine</div>
-                <div class="ship-div" id="patrol-boat-choice">Patrol Boat</div>
-            </div>
-            <button id="reset-game-button">RESET GAME</button>
+          <button id="rotate-ship-button">ROTATE SHIP</button>
+          <div id="ship-choices">
+            <div class="ship-div" id="carrier-choice">Carrier</div>
+            <div class="ship-div" id="battleship-choice">Battleship</div>
+            <div class="ship-div" id="destroyer-choice">Destroyer</div>
+            <div class="ship-div" id="submarine-choice">Submarine</div>
+            <div class="ship-div" id="patrol-boat-choice">Patrol Boat</div>
+          </div>
+          <button id="reset-game-button">RESET GAME</button>
         </div>
-
-    </aside>
-    <div class="players-container">
+      </aside>
+      <div class="players-container">
         <div class="fleets-names-containers">
-            <img class="fleets-icon" src="./images/monsters.svg" alt="Icon of Computer's Fleet">
-            <h2 class="fleets-names">Computer Navy</h2>
+          <img
+            class="fleets-icon"
+            src="./images/monsters.svg"
+            alt="Icon of Computer's Fleet"
+          />
+          <h2 class="fleets-names">Computer Navy</h2>
         </div>
         <div class="grid-container" id="computer-gameboard">
-            <span></span>
-            <span>A</span>
-            <span>B</span>
-            <span>C</span>
-            <span>D</span>
-            <span>E</span>
-            <span>F</span>
-            <span>G</span>
-            <span>H</span>
-            <span>I</span>
-            <span>J</span>
-            <span>1</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>2</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>3</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>4</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>5</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>6</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>7</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>8</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>9</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span>10</span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
-            <span class="gameboard-array"></span>
+          <span></span>
+          <span>A</span>
+          <span>B</span>
+          <span>C</span>
+          <span>D</span>
+          <span>E</span>
+          <span>F</span>
+          <span>G</span>
+          <span>H</span>
+          <span>I</span>
+          <span>J</span>
+          <span>1</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>2</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>3</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>4</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>5</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>6</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>7</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>8</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>9</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span>10</span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
+          <span class="gameboard-array"></span>
         </div>
-    </div>
-</main>
-</body>
+      </div>
+    </main>
+  </body>
 </html>
-
-<!--
-<div class="grid-container" id="computer-gameboard">
-    <span></span>
-    <span>A</span>
-    <span>B</span>
-    <span>C</span>
-    <span>D</span>
-    <span>E</span>
-    <span>F</span>
-    <span>G</span>
-    <span>H</span>
-    <span>I</span>
-    <span>J</span>
-    <span>1</span>
-    <span class="gameboard-array">A1</span>
-    <span class="gameboard-array">B1</span>
-    <span class="gameboard-array">C1</span>
-    <span class="gameboard-array">D1</span>
-    <span class="gameboard-array">E1</span>
-    <span class="gameboard-array">F1</span>
-    <span class="gameboard-array">G1</span>
-    <span class="gameboard-array">H1</span>
-    <span class="gameboard-array">I1</span>
-    <span class="gameboard-array">J1</span>
-    <span>2</span>
-    <span class="gameboard-array">A2</span>
-    <span class="gameboard-array">B2</span>
-    <span class="gameboard-array">C2</span>
-    <span class="gameboard-array">D2</span>
-    <span class="gameboard-array">E2</span>
-    <span class="gameboard-array">F2</span>
-    <span class="gameboard-array">G2</span>
-    <span class="gameboard-array">H2</span>
-    <span class="gameboard-array">I2</span>
-    <span class="gameboard-array">J2</span>
-    <span>3</span>
-    <span class="gameboard-array">A3</span>
-    <span class="gameboard-array">B3</span>
-    <span class="gameboard-array">C3</span>
-    <span class="gameboard-array">D3</span>
-    <span class="gameboard-array">E3</span>
-    <span class="gameboard-array">F3</span>
-    <span class="gameboard-array">G3</span>
-    <span class="gameboard-array">H3</span>
-    <span class="gameboard-array">I3</span>
-    <span class="gameboard-array">J3</span>
-    <span>4</span>
-    <span class="gameboard-array">A4</span>
-    <span class="gameboard-array">B4</span>
-    <span class="gameboard-array">C4</span>
-    <span class="gameboard-array">D4</span>
-    <span class="gameboard-array">E4</span>
-    <span class="gameboard-array">F4</span>
-    <span class="gameboard-array">G4</span>
-    <span class="gameboard-array">H4</span>
-    <span class="gameboard-array">I4</span>
-    <span class="gameboard-array">J4</span>
-    <span>5</span>
-    <span class="gameboard-array">A5</span>
-    <span class="gameboard-array">B5</span>
-    <span class="gameboard-array">C5</span>
-    <span class="gameboard-array">D5</span>
-    <span class="gameboard-array">E5</span>
-    <span class="gameboard-array">F5</span>
-    <span class="gameboard-array">G5</span>
-    <span class="gameboard-array">H5</span>
-    <span class="gameboard-array">I5</span>
-    <span class="gameboard-array">J5</span>
-    <span>6</span>
-    <span class="gameboard-array">A6</span>
-    <span class="gameboard-array">B6</span>
-    <span class="gameboard-array">C6</span>
-    <span class="gameboard-array">D6</span>
-    <span class="gameboard-array">E6</span>
-    <span class="gameboard-array">F6</span>
-    <span class="gameboard-array">G6</span>
-    <span class="gameboard-array">H6</span>
-    <span class="gameboard-array">I6</span>
-    <span class="gameboard-array">J6</span>
-    <span>7</span>
-    <span class="gameboard-array">A7</span>
-    <span class="gameboard-array">B7</span>
-    <span class="gameboard-array">C7</span>
-    <span class="gameboard-array">D7</span>
-    <span class="gameboard-array">E7</span>
-    <span class="gameboard-array">F7</span>
-    <span class="gameboard-array">G7</span>
-    <span class="gameboard-array">H7</span>
-    <span class="gameboard-array">I7</span>
-    <span class="gameboard-array">J7</span>
-    <span>8</span>
-    <span class="gameboard-array">A8</span>
-    <span class="gameboard-array">B8</span>
-    <span class="gameboard-array">C8</span>
-    <span class="gameboard-array">D8</span>
-    <span class="gameboard-array">E8</span>
-    <span class="gameboard-array">F8</span>
-    <span class="gameboard-array">G8</span>
-    <span class="gameboard-array">H8</span>
-    <span class="gameboard-array">I8</span>
-    <span class="gameboard-array">J8</span>
-    <span>9</span>
-    <span class="gameboard-array">A9</span>
-    <span class="gameboard-array">B9</span>
-    <span class="gameboard-array">C9</span>
-    <span class="gameboard-array">D9</span>
-    <span class="gameboard-array">E9</span>
-    <span class="gameboard-array">F9</span>
-    <span class="gameboard-array">G9</span>
-    <span class="gameboard-array">H9</span>
-    <span class="gameboard-array">I9</span>
-    <span class="gameboard-array">J9</span>
-    <span>10</span>
-    <span class="gameboard-array">A10</span>
-    <span class="gameboard-array">B10</span>
-    <span class="gameboard-array">C10</span>
-    <span class="gameboard-array">D10</span>
-    <span class="gameboard-array">E10</span>
-    <span class="gameboard-array">F10</span>
-    <span class="gameboard-array">G10</span>
-    <span class="gameboard-array">H10</span>
-    <span class="gameboard-array">I10</span>
-    <span class="gameboard-array">J10</span>
-</div>-->

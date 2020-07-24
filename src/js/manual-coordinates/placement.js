@@ -19,7 +19,7 @@ const setSpectralShipProcess = (gamebrdObj, gamebrdCases) => {
 };
 
 /** * Set Event Listeners (click) for all Ship Choices ** */
-// Carrier event listener
+
 const shipChoice = (gamebrdObj) => {
   // Set different CSS style for selected ship
   elementsDOM.allShips.forEach((item) => {
@@ -28,7 +28,7 @@ const shipChoice = (gamebrdObj) => {
     });
   });
 
-  // Carrier Event listener
+  // Carrier Event Listener
   elementsDOM.carrier.addEventListener("click", () => {
     placement.shipPlaced = false;
     placement.shipDOMSelected = elementsDOM.carrier;
@@ -44,7 +44,7 @@ const shipChoice = (gamebrdObj) => {
     });
   });
 
-  // Battleship event listener
+  // Battleship Event Listener
   elementsDOM.battleship.addEventListener("click", () => {
     placement.shipPlaced = false;
     placement.shipDOMSelected = elementsDOM.battleship;
@@ -60,7 +60,7 @@ const shipChoice = (gamebrdObj) => {
     });
   });
 
-  // Destroyer event listener
+  // Destroyer Event Listener
   elementsDOM.destroyer.addEventListener("click", () => {
     placement.shipPlaced = false;
     placement.shipDOMSelected = elementsDOM.destroyer;
@@ -76,7 +76,7 @@ const shipChoice = (gamebrdObj) => {
     });
   });
 
-  // Submarine event listener
+  // Submarine Event Listener
   elementsDOM.submarine.addEventListener("click", () => {
     placement.shipPlaced = false;
     placement.shipDOMSelected = elementsDOM.submarine;
@@ -92,7 +92,7 @@ const shipChoice = (gamebrdObj) => {
     });
   });
 
-  // Patrol Boat event listener
+  // Patrol Boat Event Listener
   elementsDOM.patrolBoat.addEventListener("click", () => {
     placement.shipPlaced = false;
     placement.shipDOMSelected = elementsDOM.patrolBoat;

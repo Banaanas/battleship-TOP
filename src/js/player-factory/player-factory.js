@@ -1,3 +1,4 @@
+// Player Function Factory
 const Player = (name, enemyGameboard) => ({
   name,
   previousAttacks: [],

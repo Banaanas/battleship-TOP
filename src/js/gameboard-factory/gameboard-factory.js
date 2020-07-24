@@ -1,9 +1,10 @@
 import elementsDOM from "../game-DOM/elements-DOM";
 import { dontStrikeTwiceMessage } from "../game-DOM/game-messages";
 
+// Gameboard Function Factory
 const Gameboard = (playerName) => ({
-  playerName,
-  gameGrid: Array(100)
+  playerName, // Used to display the Winner's name
+  gameGrid: Array(100) // Create array of 100
     .fill(false),
   allShips: [],
   missedShots: [],

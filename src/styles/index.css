@@ -15,6 +15,8 @@ html {
     --secondary-text-color: #db7093;
 }
 
+/* BODY */
+
 body {
     display: flex;
     flex-direction: column;
@@ -25,6 +27,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--primary-color);
 }
+
+/* HEADER */
 
 header {
     display: flex;
@@ -38,7 +42,6 @@ header {
     border-bottom: solid 3px var(--primary-text-color);
 }
 
-/* Header Icon */
 .header-icons {
     width: 10rem;
 }
@@ -51,7 +54,8 @@ header {
     width: 10rem;
 }
 
-/* Title */
+/* Battleship Title */
+
 h1 {
     width: auto;
     color: var(--secondary-text-color);
@@ -62,6 +66,8 @@ h1 {
     text-shadow: 2px 2px var(--primary-dark-color);
     cursor: default;
 }
+
+/* MAIN */
 
 #main {
     display: flex;
@@ -74,29 +80,7 @@ h1 {
     text-align: center;
 }
 
-/* Fleets names containers */
-.fleets-names-containers {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.fleets-names {
-    padding: 1rem;
-    color: var(--primary-dark-color);
-    font-weight: bolder;
-    font-size: 3rem;
-    text-transform: uppercase;
-    background-color: var(--primary-text-color);
-    border: solid 3px var(--primary-dark-color);
-    border-radius: 3px;
-    cursor: default;
-}
-
-.fleets-icon {
-    width: 7.5rem;
-    margin: 0 2rem;
-}
+/** ASIDE (between the two players) **/
 
 aside {
     display: flex;
@@ -110,6 +94,7 @@ aside {
 }
 
 /* Game Message */
+
 #game-message {
     display: flex;
     flex-direction: column;
@@ -126,59 +111,6 @@ aside {
     border-radius: 3px;
     cursor: default;
 }
-
-/* Human's and computer's gameboards' containers*/
-.players-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-/* Human's and Computer's gameboard */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(11, minmax(4rem, 1fr));
-    overflow: hidden;
-    border: solid 8px var(--primary-dark-color);
-    border-radius: 5px;
-}
-
-.grid-container span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 4rem;
-    height: 4rem;
-    overflow: hidden;
-    font-weight: bolder;
-    font-size: 1.5rem;
-    background-color: var(--primary-light-color);
-    border: solid 1px var(--primary-text-color);
-    cursor: default;
-}
-
-/* A - J */
-.grid-container span:nth-child(-n + 11) {
-    background-color: var(--secondary-text-color);
-    cursor: default;
-}
-
-/* 1 - 10 */
-.grid-container span:nth-child(11n + 12) {
-    background-color: var(--secondary-text-color);
-    cursor: default;
-}
-
-/* Empty/First Case */
-.grid-container span:first-child {
-    background-color: var(--primary-light-color);
-    cursor: default;
-}
-
-/** Human gameboard **/
 
 /* Human Navy */
 
@@ -271,7 +203,85 @@ aside {
     background-color: var(--primary-text-color);
 }
 
-/* Computer gameboard */
+/* Human's and computer's gameboards' containers*/
+.players-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Fleets names containers */
+.fleets-names-containers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fleets-names {
+    padding: 1rem;
+    color: var(--primary-dark-color);
+    font-weight: bolder;
+    font-size: 3rem;
+    text-transform: uppercase;
+    background-color: var(--primary-text-color);
+    border: solid 3px var(--primary-dark-color);
+    border-radius: 3px;
+    cursor: default;
+}
+
+.fleets-icon {
+    width: 7.5rem;
+    margin: 0 2rem;
+}
+
+/* Human's and Computer's gameboard */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(11, minmax(4rem, 1fr));
+    overflow: hidden;
+    border: solid 8px var(--primary-dark-color);
+    border-radius: 5px;
+}
+
+.grid-container span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    background-color: var(--primary-light-color);
+    border: solid 1px var(--primary-text-color);
+    cursor: default;
+}
+
+/* Grid Cases - A - J */
+.grid-container span:nth-child(-n + 11) {
+    background-color: var(--secondary-text-color);
+    cursor: default;
+}
+
+/* Grid Cases -  1 - 10 */
+.grid-container span:nth-child(11n + 12) {
+    background-color: var(--secondary-text-color);
+    cursor: default;
+}
+
+/*  Grid Cases -  Empty/First Case */
+.grid-container span:first-child {
+    background-color: var(--primary-light-color);
+    cursor: default;
+}
+
+
+/* COMPUTER GAMEBOARD */
+
 #computer-gameboard > span {
     cursor: url("../images/target.svg"), auto;
 }
@@ -280,30 +290,27 @@ aside {
     background-color: var(--primary-dark-color);
 }
 
-/* A - J */
+/* Grid Cases -   A - J */
 #computer-gameboard > span:nth-child(-n + 11) {
     cursor: default;
 }
 
 #computer-gameboard > span:nth-child(-n + 11):hover {
-    background-color: pink;
+    background-color: var(--secondary-text-color);
 }
 
-/* 1 - 10 */
+/*  Grid Cases -  1 - 10 */
 #computer-gameboard span:nth-child(11n + 12) {
+    background-color: var(--secondary-text-color);
     cursor: default;
 }
 
-/* 1 - 10 */
-#computer-gameboard span:nth-child(11n + 12):hover {
-    background-color: palevioletred;
-}
-
-/* Empty/First Case */
+/* Grid Cases -   Empty/First Case */
 #computer-gameboard span:first-child {
     cursor: default;
 }
 
+/* Grid Cases -   Empty/First Case */
 #computer-gameboard span:first-child:hover {
     background-color: var(--primary-light-color);
     cursor: default;
@@ -319,7 +326,7 @@ aside {
 }
 
 
-/*** MEDIA QUERIES - Max Width - 1200px***/
+/*** MEDIA QUERIES - Max Width - 1200px ***/
 
 @media only screen and (max-width: 1200px) {
 
@@ -340,22 +347,6 @@ aside {
         width: 100%;
     }
 
-    #human-navy {
-        flex-direction: row-reverse;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-
-    #reset-game-button,
-    #rotate-ship-button,
-    #start-game-button {
-        font-size: 1.5rem;
-    }
-
-    .ship-div {
-        font-size: 1.5rem;
-    }
 
     #game-message {
         position: fixed;
@@ -364,6 +355,22 @@ aside {
         font-size: 2rem;
         border: 3px solid var(--primary-dark-color);
         visibility: hidden;
+    }
+
+    #human-navy {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .ship-div {
+        font-size: 1.5rem;
+    }
+
+    #reset-game-button,
+    #rotate-ship-button,
+    #start-game-button {
+        font-size: 1.5rem;
     }
 
     .players-container {
@@ -389,17 +396,17 @@ aside {
         min-height: auto;
     }
 
-    .grid-container {
-        grid-template-columns: repeat(11, minmax(2rem, 1fr));
-        border: solid 8px var(--primary-dark-color);
-    }
-
     .fleets-names {
         font-size: 1.2rem;
     }
 
     .fleets-icon {
         width: 4rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(11, minmax(2rem, 1fr));
+        border: solid 8px var(--primary-dark-color);
     }
 
     .grid-container span {
@@ -436,5 +443,4 @@ aside {
     .missed-shot-icon {
         width: 1rem;
     }
-
 }

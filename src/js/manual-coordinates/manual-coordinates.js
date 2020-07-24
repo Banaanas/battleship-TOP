@@ -1,9 +1,6 @@
 import renderInitGameboard from "../game-DOM/render-init-gameboard";
 import elementsDOM from "../game-DOM/elements-DOM";
-import {
-  displayclickStartButtonMessage,
-  waitMessage,
-} from "../game-DOM/game-messages";
+import { displayclickStartButtonMessage, waitMessage } from "../game-DOM/game-messages";
 // import gameController from "../game-controller/game-controller";
 
 /** * Placement Object ** */

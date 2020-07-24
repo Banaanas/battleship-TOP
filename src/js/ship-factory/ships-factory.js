@@ -1,3 +1,4 @@
+// Ship Function Factory
 const Ship = (shipLength) => ({
   shipLength,
   coords: [],

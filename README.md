@@ -35,7 +35,7 @@
 
 <p align="center">
     Simple, elegant and funny BattleShip Game.<br/><br/>
-    <a href="https://banaanas.github.io/my-weather-app/">:computer: Live Demo :eyes:</a><br/><br/>
+    <a href="https://banaanas.github.io/battleship-TOP/">:computer: Live Demo :eyes:</a><br/><br/>
 </p>
 
 
