@@ -34,7 +34,7 @@
 <h1 align="center">:medal_military: Battleship :bomb:</h1>
 
 <p align="center">
-    Simple, elegant and funny BattleShip Game.<br/><br/>
+    Nice and funny BattleShip Game.<br/><br/>
     <a href="https://banaanas.github.io/battleship-TOP/">:computer: Live Demo :eyes:</a><br/><br/>
 </p>
 
