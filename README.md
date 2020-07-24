@@ -73,7 +73,7 @@ One important
 - Responsive design.
 
 <p align="center">
-  <a href="https://banaanas.github.io/my-weather-app/">
+  <a href="https://banaanas.github.io/battleship-TOP/">
     <img src="src/images/README/screenshot-2.png" alt="Screenshot" width="240" height="500">
   </a>
 </p>
