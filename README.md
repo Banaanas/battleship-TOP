@@ -26,7 +26,7 @@
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
-    <a href="https://github.com/Banaanas/battleship-TOP">
+    <a href="https://banaanas.github.io/battleship-TOP/">
         <img src="./src/images/README/project-logo.svg" alt="Project's Logo" width="80" height="80">
     </a>
 </p>
@@ -59,7 +59,7 @@ Battleship Game achieved as part of <a href="https://www.theodinproject.com/cour
 One important 
 
 <p align="center">
-  <a href="https://banaanas.github.io/my-weather-app/">
+  <a href="https://banaanas.github.io/battleship-TOP/">
     <img src="src/images/README/screenshot-1.png" alt="Screenshot" width="455" height="300">
   </a>
 </p>
