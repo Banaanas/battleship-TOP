@@ -55,7 +55,7 @@
 <!-- TABLE OF CONTENTS -->
 
 ## About the Project
-Battleship Game achieved as part of <a href="https://www.theodinproject.com/courses/javascript/lessons/battleship">The Odin Project - JavaScript curriculum</a>.
+Battleship Game achieved as part of <a href="https://www.theodinproject.com/">The Odin Project - JavaScript curriculum</a>.
 
 <p align="center">
   <a href="https://banaanas.github.io/battleship-TOP/">
