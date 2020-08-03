@@ -59,7 +59,7 @@ Battleship Game achieved as part of <a href="https://www.theodinproject.com/">Th
 
 <p align="center">
   <a href="https://banaanas.github.io/battleship-TOP/">
-    <img src="src/images/README/animated-gif-1.gif" alt="Animated Gif" width="455" height="400">
+    <img src="src/images/README/animated-gif-1.gif" alt="Animated Gif" width="455" height="350">
   </a>
 </p>
 
