@@ -3,6 +3,28 @@
 # Useful .gitignore templates: https://github.com/github/gitignore
 # Use https://www.gitignore.io/ to be more accurate
 
+
+# Dependency directories
 node_modules/
-dist/
-.idea
+
+# Compiled output
+/dist
+
+# IDE - WebStorm
+/* .idea */ // Not ignored for personal projects
+
+# dotenv environment variables file
+.env
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# System Files
+.DS_Store
+Thumbs.db
+
