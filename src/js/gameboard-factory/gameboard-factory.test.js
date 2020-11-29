@@ -4,8 +4,8 @@ import Ship from "../ship-factory/ships-factory";
 const gameboardTest = Gameboard();
 const gameboardTestEnemy = Gameboard();
 const carrier = Ship("carrier", 5);
-const destroyer = Ship("destroyer", 3);
 const patrolBoat = Ship("patrolBoat", 2);
+const destroyer = Ship("destroyer", 3);
 carrier.coords = [0, 1, 2, 3, 4];
 destroyer.coords = [70, 71, 72];
 gameboardTest.allShips.push(carrier, destroyer, patrolBoat);
@@ -126,11 +126,11 @@ describe("gameboardTest.receiveAttack method - 2", () => {
     // eslint-disable-next-line max-len
     expect(gameboardTest.receiveAttack(96, gameboardTestEnemy))
       .toBe(false); // Duplicate strike at same (empty) position - Duplicate missed shot
-    const previousAttackLenghtBeforeDuplicated = gameboardTestEnemy.previousAttacks.length;
+    const previousAttackLengthBeforeDuplicated = gameboardTestEnemy.previousAttacks.length;
     // eslint-disable-next-line max-len
     gameboardTest.receiveAttack(96, gameboardTestEnemy); // Same duplicate strike - Duplicate missed shot
     expect(gameboardTestEnemy.previousAttacks.length)
-      .toBe(previousAttackLenghtBeforeDuplicated);
+      .toBe(previousAttackLengthBeforeDuplicated);
   });
 });
 
@@ -139,20 +139,20 @@ describe("gameboardTest.receiveAttack method - 3", () => {
     // eslint-disable-next-line max-len
     expect(gameboardTest.receiveAttack(72, gameboardTestEnemy))
       .toBe(false); // Same strike at same (occupied) position - Duplicate damage
-    const previousAttackLenghtBeforeDuplicated = gameboardTestEnemy.previousAttacks.length;
+    const previousAttackLengthBeforeDuplicated = gameboardTestEnemy.previousAttacks.length;
     // eslint-disable-next-line max-len
     gameboardTest.receiveAttack(72, gameboardTestEnemy); // Same duplicate strike - Duplicate damage
     expect(gameboardTestEnemy.previousAttacks.length)
-      .toBe(previousAttackLenghtBeforeDuplicated);
+      .toBe(previousAttackLengthBeforeDuplicated);
     // eslint-disable-next-line max-len
     gameboardTest.receiveAttack(10, gameboardTestEnemy); // No duplicate strike - Accept the strike
     // eslint-disable-next-line max-len
     expect(gameboardTestEnemy.previousAttacks.length)
       .not
-      .toBe(previousAttackLenghtBeforeDuplicated);
+      .toBe(previousAttackLengthBeforeDuplicated);
     // eslint-disable-next-line max-len
     expect(gameboardTestEnemy.previousAttacks.length)
-      .toBe(previousAttackLenghtBeforeDuplicated + 1);
+      .toBe(previousAttackLengthBeforeDuplicated + 1);
   });
 });
 

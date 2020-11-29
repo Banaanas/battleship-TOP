@@ -1,4 +1,4 @@
-import randomCoordinates from "./random-coordinates";
+import { randomCoordinates } from "./random-coordinates";
 
 describe("gameboardTest..randomCoords method", () => {
   it("should generate array which length is equal to shipLength", () => {

@@ -1,6 +1,6 @@
 import renderInitGameboard from "../game-DOM/render-init-gameboard";
 import elementsDOM from "../game-DOM/elements-DOM";
-import { displayclickStartButtonMessage, waitMessage } from "../game-DOM/game-messages";
+import { displayClickStartButtonMessage, waitMessage } from "../game-DOM/game-messages";
 // import gameController from "../game-controller/game-controller";
 
 /** * Placement Object ** */
@@ -63,7 +63,7 @@ const placement = {
 
       // Add Event Listener - After startGameButton appears but not clicked,
       // ask to click startGameButton if User clicks on the computer gameboard
-      displayclickStartButtonMessage();
+      displayClickStartButtonMessage();
     }
   },
 

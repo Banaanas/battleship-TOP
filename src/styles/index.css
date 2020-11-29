@@ -116,7 +116,7 @@ aside {
   border-radius: 3px;
   visibility: hidden;
   cursor: default;
-  overflow: hidden ;
+  overflow: hidden;
 }
 
 /* Human Navy */
@@ -127,6 +127,7 @@ aside {
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  padding: 1rem 0;
 }
 
 #game-tools-aside {
@@ -214,7 +215,6 @@ aside {
   justify-content: center;
   width: 100%;
   height: 100%;
-  margin-top: 1.5rem;
 }
 
 /* Fleets names containers */
@@ -237,7 +237,7 @@ aside {
 }
 
 .fleets-icon {
-  width: 3.8rem;
+  width: 3rem;
   margin: 0 1rem;
 }
 
@@ -322,11 +322,11 @@ aside {
 
 /* Strike Images */
 .explosion-icon {
-  width: 0.9rem;
+  width: 1.2rem;
 }
 
 .missed-shot-icon {
-  width: 0.5rem;
+  width: 1rem;
 }
 
 /*** MEDIA QUERIES - Min Width - 700px ***/
@@ -352,18 +352,16 @@ aside {
   }
 
   .fleets-icon {
-    width: 2rem;
+    width: 4.2rem;
   }
 
   .grid-container {
-    grid-template-columns: repeat(11, minmax(1.5rem, 1fr));
-    color: black;
-    border: solid 8px var(--primary-dark-color);
+    grid-template-columns: repeat(11, minmax(2.5rem, 1fr));
   }
 
   .grid-container span {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     font-size: 0.8rem;
   }
 
@@ -385,17 +383,17 @@ aside {
 
   /* Strike Images */
   .explosion-icon {
-    width: 0.9rem;
+    width: 1.4rem;
   }
 
   .missed-shot-icon {
-    width: 0.5rem;
+    width: 1.2rem;
   }
 }
 
-/*** MEDIA QUERIES - Min Width - 980 ***/
+/*** MEDIA QUERIES - Min Width - 1200 ***/
 
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 1200px) {
   #main {
     flex-direction: row;
   }
@@ -414,7 +412,7 @@ aside {
   }
 
   .fleets-icon {
-    width: 2rem;
+    width: 5rem;
   }
 
   #human-navy {
@@ -424,15 +422,6 @@ aside {
 
   #game-tools-aside {
     flex-direction: column;
-  }
-
-  .grid-container {
-    grid-template-columns: repeat(11, minmax(2rem, 1fr));
-  }
-
-  .grid-container span {
-    width: 2rem;
-    height: 2rem;
   }
 
   #game-message {
@@ -466,11 +455,6 @@ aside {
     padding: 1rem;
     font-size: 1rem;
     transition: color, background-color 0.7s ease-out;
-  }
-
-  /* Human's and computer's gameboards' containers */
-  .players-container {
-    margin-top: 1.5rem;
   }
 
   /* Strike Images */

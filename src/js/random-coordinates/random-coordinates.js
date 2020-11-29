@@ -49,7 +49,7 @@ const randomCoordinates = (shipLength, orientation) => {
    a range (numbersRanges[randomNumber]) must not exceed the range from which
    placement gets impossible, else it would generate an infinite do...while loop
    later, while trying to find a random coordinate.
-   Example - shipLenth is 2, then the maximum range would be [80, 89] -> numbersRanges[8].
+   Example - shipLength is 2, then the maximum range would be [80, 89] -> numbersRanges[8].
    So the max randomNumber to randomly set a range should be 8. Which is 10 - 2.
    --> For each ship, the max randomNumber to randomly set a range is : 10 - shipLength.
     */
@@ -144,4 +144,5 @@ const getRandomNavy = () => {
   return randomNavy;
 };
 
-export default getRandomNavy;
+
+export {randomCoordinates, getRandomNavy};

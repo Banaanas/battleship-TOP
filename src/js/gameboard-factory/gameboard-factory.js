@@ -56,7 +56,6 @@ const Gameboard = (playerName) => ({
   },
   receiveAttack(coord, enemyBoard) { // Gameboard receiving attack
     this.duplicateStrike = false; // Reset duplicateStrike if modified before
-
     if (enemyBoard.previousAttacks.includes(coord)) {
       // displayDontStrikeTwiceMessage();
       dontStrikeTwiceMessage();

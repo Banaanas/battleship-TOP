@@ -1,7 +1,7 @@
 // Create Human and Computer's navies
 import Ship from "../ship-factory/ships-factory";
 import Gameboard from "../gameboard-factory/gameboard-factory";
-import getRandomNavy from "../random-coordinates/random-coordinates";
+import { getRandomNavy } from "../random-coordinates/random-coordinates";
 import shipChoice from "../manual-coordinates/placement";
 import elementsDOM from "../game-DOM/elements-DOM";
 import gameController from "../game-controller/game-controller";
