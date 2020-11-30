@@ -35,7 +35,7 @@
 
 <p align="center">
     Nice and funny BattleShip Game.<br/><br/>
-    <a href="https://google.fr/">:computer: Live Demo :eyes:</a><br/><br/>
+    <a href="https://battleship.cyrilo.app/">:computer: Live Demo :eyes:</a><br/><br/>
 </p>
 
 
