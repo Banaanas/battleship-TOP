@@ -2,8 +2,9 @@
 *** Useful links for the README.md file's redaction
 *** https://shields.io/ - Shields
 *** https://www.webfx.com/tools/emoji-cheat-sheet/ - Emojis
-*** https://github.com/othneildrew/Best-README-Template - General Inspiration for this file
+*** https://github.com/othneildrew/Best-README-Template - General Inspiration for this file 
 -->
+
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -17,14 +18,15 @@
 -->
 
 [![Personal Website][personal-website-shield]][personal-website-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][linkedIn-url]
 [![MIT License][license-shield]][license-url]
+
 
 <br/>
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
-    <a href="https//battleship.cyrilo.app/">
+    <a href="https://banaanas.github.io/battleship-TOP/">
         <img src="./src/images/README/project-logo.svg" alt="Project's Logo" width="120" height="120">
     </a>
 </p>
@@ -33,8 +35,9 @@
 
 <p align="center">
     Nice and funny BattleShip Game.<br/><br/>
-    <a href="https//battleship.cyrilo.app/">:computer: Live Demo :eyes:</a><br/><br/>
+    <a href="https://google.fr/">:computer: Live Demo :eyes:</a><br/><br/>
 </p>
+
 
 <!-- TABLE OF CONTENTS -->
 
@@ -52,20 +55,19 @@
 <!-- TABLE OF CONTENTS -->
 
 ## About the Project
-
 Battleship Game achieved as part of <a href="https://www.theodinproject.com/">The Odin Project - JavaScript Curriculum</a>.
 
 <p align="center">
-  <a href="https//battleship.cyrilo.app/">
+  <a href="https://banaanas.github.io/battleship-TOP/">
     <img src="src/images/README/animated-gif-1.gif" alt="Animated Gif" width="455" height="300">
   </a>
-  <a href="https//battleship.cyrilo.app/">
+  <a href="https://banaanas.github.io/battleship-TOP/">
     <img src="src/images/README/screenshot-1.png" alt="Screenshot" width="455" height="300">
   </a>
 </p>
 
-#### Principal Features
 
+#### Principal Features
 - Human Player vs. Computer Player ;
 - Manual ship placement (Human Player) ;
 - Random ship placement (Computer Player) ;
@@ -73,10 +75,10 @@ Battleship Game achieved as part of <a href="https://www.theodinproject.com/">Th
 - Responsive design.
 
 <p align="center">
-  <a href="https//battleship.cyrilo.app/">
+  <a href="https://banaanas.github.io/battleship-TOP/">
     <img src="src/images/README/animated-gif-2.gif" alt="Animated Gif" width="240" height="400">
   </a>
-  <a href="https//battleship.cyrilo.app/">
+  <a href="https://banaanas.github.io/battleship-TOP/">
     <img src="src/images/README/screenshot-2.png" alt="Screenshot" width="240" height="400">
   </a>
 </p>
@@ -88,7 +90,6 @@ Battleship Game achieved as part of <a href="https://www.theodinproject.com/">Th
 ES6 - Factory Functions - Random Ship Placement algorithm - Async / Await
 
 Test-Driven Development (TDD) - Jest
-
 - [HTML5](https://www.w3.org/html/)
 - [CSS3](https://www.w3.org/Style/CSS/Overview.html)
 
@@ -101,6 +102,7 @@ Grid - Flexbox - Media Queries
 - [ESLint](https://eslint.org/)
 - [ESLint](https://prettier.io/)
 - [stylelint](https://stylelint.io/)
+
 
 <!-- GETTING STARTED -->
 
@@ -130,16 +132,15 @@ npm install
 ```
 
 3 - Development Server
-
 ```sh
 npm start
 ```
 
 4 - Production build
-
 ```sh
 npm run build
 ```
+
 
 <!-- LICENSE -->
 
@@ -147,13 +148,15 @@ npm run build
 
 Distributed under the MIT License. See <a href="./LICENCE.txt">`LICENSE`</a> for more information.
 
+
 <!-- CONTACT -->
 
 ## Contact
 
-Cyrilo - [Personal Website](https://cyrilo.dev/) - [Mail](mailto:cyrilodev@gmail.com)
+Cyrilo - [Personal Website](https://cyrilo.dev/) - [Mail](mailto:cyrilodev@gmail.com)  
 
 Project Link: [https://github.com/Banaanas/battleship-TOP](https://github.com/Banaanas/battleship-TOP)
+
 
 <!-- ACKNOWLEDGEMENTS -->
 
