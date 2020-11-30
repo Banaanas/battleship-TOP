@@ -24,7 +24,7 @@
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
-    <a href="https://https://battleship.cyrilo.app/">
+    <a href="https//battleship.cyrilo.app/">
         <img src="./src/images/README/project-logo.svg" alt="Project's Logo" width="120" height="120">
     </a>
 </p>
@@ -33,7 +33,7 @@
 
 <p align="center">
     Nice and funny BattleShip Game.<br/><br/>
-    <a href="https://https://battleship.cyrilo.app/">:computer: Live Demo :eyes:</a><br/><br/>
+    <a href="https//battleship.cyrilo.app/">:computer: Live Demo :eyes:</a><br/><br/>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -56,10 +56,10 @@
 Battleship Game achieved as part of <a href="https://www.theodinproject.com/">The Odin Project - JavaScript Curriculum</a>.
 
 <p align="center">
-  <a href="https://https://battleship.cyrilo.app/">
+  <a href="https//battleship.cyrilo.app/">
     <img src="src/images/README/animated-gif-1.gif" alt="Animated Gif" width="455" height="300">
   </a>
-  <a href="https://https://battleship.cyrilo.app/">
+  <a href="https//battleship.cyrilo.app/">
     <img src="src/images/README/screenshot-1.png" alt="Screenshot" width="455" height="300">
   </a>
 </p>
@@ -73,10 +73,10 @@ Battleship Game achieved as part of <a href="https://www.theodinproject.com/">Th
 - Responsive design.
 
 <p align="center">
-  <a href="https://https://battleship.cyrilo.app/">
+  <a href="https//battleship.cyrilo.app/">
     <img src="src/images/README/animated-gif-2.gif" alt="Animated Gif" width="240" height="400">
   </a>
-  <a href="https://https://battleship.cyrilo.app/">
+  <a href="https//battleship.cyrilo.app/">
     <img src="src/images/README/screenshot-2.png" alt="Screenshot" width="240" height="400">
   </a>
 </p>
