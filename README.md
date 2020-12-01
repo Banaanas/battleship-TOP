@@ -2,9 +2,8 @@
 *** Useful links for the README.md file's redaction
 *** https://shields.io/ - Shields
 *** https://www.webfx.com/tools/emoji-cheat-sheet/ - Emojis
-*** https://github.com/othneildrew/Best-README-Template - General Inspiration for this file 
+*** https://github.com/othneildrew/Best-README-Template - General Inspiration for this file
 -->
-
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -18,9 +17,8 @@
 -->
 
 [![Personal Website][personal-website-shield]][personal-website-url]
-[![LinkedIn][linkedin-shield]][linkedIn-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 [![MIT License][license-shield]][license-url]
-
 
 <br/>
 <!-- PROJECT LOGO -->
@@ -38,7 +36,6 @@
     <a href="https://battleship.cyrilo.app/">:computer: Live Demo :eyes:</a><br/><br/>
 </p>
 
-
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
@@ -55,6 +52,7 @@
 <!-- TABLE OF CONTENTS -->
 
 ## About the Project
+
 Battleship Game achieved as part of <a href="https://www.theodinproject.com/">The Odin Project - JavaScript Curriculum</a>.
 
 <p align="center">
@@ -66,8 +64,8 @@ Battleship Game achieved as part of <a href="https://www.theodinproject.com/">Th
   </a>
 </p>
 
-
 #### Principal Features
+
 - Human Player vs. Computer Player ;
 - Manual ship placement (Human Player) ;
 - Random ship placement (Computer Player) ;
@@ -90,6 +88,7 @@ Battleship Game achieved as part of <a href="https://www.theodinproject.com/">Th
 ES6 - Factory Functions - Random Ship Placement algorithm - Async / Await
 
 Test-Driven Development (TDD) - Jest
+
 - [HTML5](https://www.w3.org/html/)
 - [CSS3](https://www.w3.org/Style/CSS/Overview.html)
 
@@ -102,7 +101,6 @@ Grid - Flexbox - Media Queries
 - [ESLint](https://eslint.org/)
 - [ESLint](https://prettier.io/)
 - [stylelint](https://stylelint.io/)
-
 
 <!-- GETTING STARTED -->
 
@@ -132,15 +130,16 @@ npm install
 ```
 
 3 - Development Server
+
 ```sh
 npm start
 ```
 
 4 - Production build
+
 ```sh
 npm run build
 ```
-
 
 <!-- LICENSE -->
 
@@ -148,15 +147,13 @@ npm run build
 
 Distributed under the MIT License. See <a href="./LICENCE.txt">`LICENSE`</a> for more information.
 
-
 <!-- CONTACT -->
 
 ## Contact
 
-Cyrilo - [Personal Website](https://cyrilo.dev/) - [Mail](mailto:cyrilodev@gmail.com)  
+Cyrilo - [Personal Website](https://cyrilo.dev/) - [Mail](mailto:cyrilodev@gmail.com)
 
 Project Link: [https://github.com/Banaanas/battleship-TOP](https://github.com/Banaanas/battleship-TOP)
-
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -173,4 +170,4 @@ Project Link: [https://github.com/Banaanas/battleship-TOP](https://github.com/Ba
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=linkedin&
 [linkedin-url]: https://linkedin.com/mylink
 [license-shield]: https://img.shields.io/badge/License-MIT-limegreen.svg
-[license-url]: ./LICENCE.txt
+[license-url]: LICENCE
