@@ -16,6 +16,7 @@ import computerFleetIcon from "./images/monsters.svg";
 
 import initGame from "./js/init-game/init-game";
 
+// Set Images src
 const headerIcons = document.querySelectorAll(".header-icons");
 const fleetsIcons = document.querySelectorAll(".fleets-icon");
 headerIcons[0].src = battleShipIcon;
