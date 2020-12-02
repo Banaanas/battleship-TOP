@@ -3,7 +3,6 @@ import "core-js";
 import "regenerator-runtime/runtime";
 
 // Import stylesheets
-import "./styles/index.scss";
 import "./styles/index.css";
 import "./styles/normalize.css";
 
