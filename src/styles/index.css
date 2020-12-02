@@ -71,7 +71,7 @@ h1 {
 /* MAIN */
 
 #main {
-  position: relative;
+  position: relative; /* GitHub Banner */
   display: flex;
   flex: 1;
   flex-direction: column;
