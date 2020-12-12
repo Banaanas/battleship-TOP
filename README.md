@@ -29,7 +29,7 @@
     </a>
 </p>
 
-<h1 align="center">:medal_military: Battleship :bomb:</h1>
+<h1 align="center">🎖️ Battleship 💣</h1>
 
 <p align="center">
     Nice and funny BattleShip Game.<br/><br/>
