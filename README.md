@@ -67,7 +67,7 @@ Battleship Game achieved as part of <a href="https://www.theodinproject.com/">Th
 - Manual ship placement (Human Player) ;
 - Random ship placement (Computer Player) ;
 - Great User Interface ;
-- Responsive design.
+- Responsive Design.
 
 <p align="center">
   <a href="https://battleship.cyrilo.app/">
