@@ -93,7 +93,7 @@ Grid - Flexbox - Media Queries
 - [Babel](https://babeljs.io/)
 - [core-js](https://github.com/zloirock/core-js/)
 - [ESLint](https://eslint.org/)
-- [ESLint](https://prettier.io/)
+- [Prettier](https://prettier.io/)
 - [stylelint](https://stylelint.io/)
 
 <!-- GETTING STARTED -->
