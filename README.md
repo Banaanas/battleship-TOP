@@ -36,6 +36,7 @@
     <a href="https://battleship.cyrilo.app/">:computer: Live Demo :eyes:</a><br/><br/>
 </p>
 
+
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
@@ -49,7 +50,8 @@
 - [License](#license)
 - [Contact](#contact)
 
-<!-- TABLE OF CONTENTS -->
+
+<!-- ABOUT THE PROJECT -->
 
 ## About the Project
 
@@ -60,6 +62,9 @@ Battleship Game achieved as part of <a href="https://www.theodinproject.com/">Th
     <img src="./src/images/README/animated-gif-1.gif" alt="Animated Gif" width="455" height="300">
   </a>
 </p>
+
+
+<!-- PRINCIPAL FEATURES -->
 
 #### Principal Features
 
@@ -74,6 +79,9 @@ Battleship Game achieved as part of <a href="https://www.theodinproject.com/">Th
     <img src="./src/images/README/animated-gif-2.gif" alt="Animated Gif" width="240" height="400">
   </a>
 </p>
+
+
+<!-- BUILT WITH -->
 
 #### Built With
 
@@ -95,6 +103,7 @@ Grid - Flexbox - Media Queries
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [stylelint](https://stylelint.io/)
+
 
 <!-- GETTING STARTED -->
 
@@ -131,11 +140,13 @@ npm run start
 npm run build
 ```
 
+
 <!-- LICENSE -->
 
 ## License
 
 Distributed under the MIT License. See <a href="./LICENSE">`LICENSE`</a> for more information.
+
 
 <!-- CONTACT -->
 
@@ -145,13 +156,13 @@ Cyrilo - [Personal Website](https://cyrilo.dev) - [Mail](mailto:cyrilo.dev@gmail
 
 Project Link: [https://github.com/Banaanas/battleship-TOP](https://github.com/Banaanas/battleship-TOP)
 
+
 <!-- ACKNOWLEDGEMENTS -->
 
 ## Acknowledgements
 
 - [The Odin Project](https://www.theodinproject.com/)
-- [GitHub Pages](https://pages.github.com)
-- [Flaticon](https://www.flaticon.com/)
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
