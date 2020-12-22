@@ -16,8 +16,12 @@ const elementsDOM = {
     "#human-gameboard-grid-container .gameboard-array",
   ),
   humanGameboardContainer: document.querySelector("#human-gameboard-container"),
-  humanGameboardGridContainer: document.querySelector("#human-gameboard-grid-container"),
-  computerGameboardCases: document.querySelectorAll("#computer-gameboard .gameboard-array"),
+  humanGameboardGridContainer: document.querySelector(
+    "#human-gameboard-grid-container",
+  ),
+  computerGameboardCases: document.querySelectorAll(
+    "#computer-gameboard .gameboard-array",
+  ),
   gridHTML: `<span></span>
             <span>A</span>
             <span>B</span>

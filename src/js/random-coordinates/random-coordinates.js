@@ -24,7 +24,8 @@ const numbersRanges = [
 ];
 
 // Return true if at least 1 duplicate/shared value between two arrays
-const checkDuplicates = (coordsArr, dupliArr) => coordsArr.some((ai) => dupliArr.includes(ai));
+const checkDuplicates = (coordsArr, dupliArr) =>
+  coordsArr.some((ai) => dupliArr.includes(ai));
 
 // Store all coordinates who have been previously attributed
 let previousAssignedCoords = [];
@@ -69,7 +70,7 @@ const randomCoordinates = (shipLength, orientation) => {
       // Get last coordinate from randomFirstCoord
       randomLastCoord = randomFirstCoord + (shipLength - 1);
       // Last coordinate must not exceed the end of the horizontal range
-    } while (randomLastCoord > (maxRangeNumb)); // because it's horizontal
+    } while (randomLastCoord > maxRangeNumb); // because it's horizontal
   }
 
   if (orientation === "vertical") {
@@ -78,7 +79,7 @@ const randomCoordinates = (shipLength, orientation) => {
       // Get randomFirstCoord from the randomly chosen range
       randomFirstCoord = getRandomInt(minRangeNumb, maxRangeNumb);
       // Get last coordinate from randomFirstCoord
-      randomLastCoord = randomFirstCoord + ((shipLength - 1) * 10);
+      randomLastCoord = randomFirstCoord + (shipLength - 1) * 10;
       // Last coordinate must not exceed the end of the horizontal range
     } while (randomLastCoord > 99); // because it's vertical
   }
@@ -88,9 +89,12 @@ const randomCoordinates = (shipLength, orientation) => {
 
   if (orientation === "horizontal") {
     // Push X (shipLength) coordinates, starting from randomFirstCoord
-    for (let index = randomFirstCoord;
+    for (
+      let index = randomFirstCoord;
       // eslint-disable-next-line no-plusplus
-      index < (randomFirstCoord + shipLength); index++) {
+      index < randomFirstCoord + shipLength;
+      index++
+    ) {
       coordsArr.push(index); // Push all coordinates into the random coordinates array
     }
   }
@@ -110,7 +114,8 @@ const randomCoordinates = (shipLength, orientation) => {
 // Create UNIQUE randomCoords (not duplicated one)
 const secureRandomCoords = (lengthShip, orientation) => {
   let newShipCoords;
-  do { // Keep generating random coords while there is duplicated one
+  do {
+    // Keep generating random coords while there is duplicated one
     newShipCoords = randomCoordinates(lengthShip, orientation);
   } while (checkDuplicates(newShipCoords, previousAssignedCoords) === true);
 
@@ -144,5 +149,4 @@ const getRandomNavy = () => {
   return randomNavy;
 };
 
-
-export {randomCoordinates, getRandomNavy};
+export { randomCoordinates, getRandomNavy };

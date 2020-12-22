@@ -2,7 +2,8 @@
 const Player = (name, enemyGameboard) => ({
   name,
   previousAttacks: [],
-  computerRandomPlay() { // Random Choice for computer player
+  computerRandomPlay() {
+    // Random Choice for computer player
     // if previousAttacks === 100, it means all computer's moves have been played
     if (this.previousAttacks.length >= 100) {
       return false;

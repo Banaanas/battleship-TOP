@@ -16,17 +16,13 @@ const expectedShip = {
 
 describe("Ship Factory", () => {
   it("should return expectedShip", () => {
-    expect(JSON.stringify(Ship(2)))
-      .toEqual(JSON.stringify(expectedShip));
+    expect(JSON.stringify(Ship(2))).toEqual(JSON.stringify(expectedShip));
   });
 
   it("should have identical properties", () => {
-    expect(Ship(2).shipLength)
-      .toBe(expectedShip.shipLength);
-    expect(Ship(2).sunk)
-      .toBe(expectedShip.sunk);
-    expect(Ship(2).damages)
-      .toEqual(expectedShip.damages);
+    expect(Ship(2).shipLength).toBe(expectedShip.shipLength);
+    expect(Ship(2).sunk).toBe(expectedShip.sunk);
+    expect(Ship(2).damages).toEqual(expectedShip.damages);
   });
 });
 
@@ -34,10 +30,7 @@ describe("Hit Function", () => {
   const newShip = Ship(5);
   it("should take a number and then mark that position as ‘hit’.", () => {
     newShip.hit(10);
-    expect(newShip.damages)
-      .toEqual([
-        10,
-      ]);
+    expect(newShip.damages).toEqual([10]);
   });
 });
 
@@ -45,8 +38,7 @@ describe("isSunk Function", () => {
   const newShip = Ship(0);
   it("should convert sunk into true if ship's length equals to", () => {
     newShip.isSunk();
-    expect(newShip.sunk)
-      .toBe(true);
+    expect(newShip.sunk).toBe(true);
   });
 });
 

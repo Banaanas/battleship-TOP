@@ -6,7 +6,10 @@ import shipChoice from "../manual-coordinates/placement";
 import elementsDOM from "../game-DOM/elements-DOM";
 import gameController from "../game-controller/game-controller";
 import placement from "../manual-coordinates/manual-coordinates";
-import { clickStartButtonMessage, displayWaitMessage } from "../game-DOM/game-messages";
+import {
+  clickStartButtonMessage,
+  displayWaitMessage,
+} from "../game-DOM/game-messages";
 import setResetGameButton from "../game-DOM/reset-game-button";
 
 // Create human and computer gameboards

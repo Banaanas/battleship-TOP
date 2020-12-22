@@ -26,14 +26,15 @@ const displayWaitMessage = () => {
 
 // Display "Don't strike twice" Message
 const dontStrikeTwiceMessage = () => {
-
   // Unlike others functions, this one has an if/else statement for Testing purpose - cf. gameboard-factory.test.js
   // Because DOM is not mocked, the (Integration) Test would not pass without the if/else statement.
-  if(elementsDOM.gameMessage !== null) {
+  if (elementsDOM.gameMessage !== null) {
     elementsDOM.gameMessage.style.visibility = "visible";
-    elementsDOM.gameMessage.style.backgroundColor = "var(--secondary-text-color)";
+    elementsDOM.gameMessage.style.backgroundColor =
+      "var(--secondary-text-color)";
     elementsDOM.gameMessage.style.color = "var(--primary-dark-color)";
-    elementsDOM.gameMessage.style.border = "solid 3px var(--primary-dark-color)";
+    elementsDOM.gameMessage.style.border =
+      "solid 3px var(--primary-dark-color)";
     elementsDOM.gameMessage.textContent = "Position already hit";
   }
   setMessageDelay();

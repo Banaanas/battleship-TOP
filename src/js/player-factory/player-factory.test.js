@@ -19,25 +19,20 @@ describe("player-factory Factory", () => {
     humanPlayer.takeTurn(10);
     humanPlayer.takeTurn(14);
     humanPlayer.takeTurn(15); // missed shot
-    expect(computerGameboard.allShips[0].damages)
-      .toContain(10);
-    expect(computerGameboard.allShips[0].damages)
-      .toContain(14);
-    expect(computerGameboard.allShips[0].damages)
-      .not
-      .toContain(15);
-    expect(computerGameboard.missedShots)
-      .toContain(15);
+    expect(computerGameboard.allShips[0].damages).toContain(10);
+    expect(computerGameboard.allShips[0].damages).toContain(14);
+    expect(computerGameboard.allShips[0].damages).not.toContain(15);
+    expect(computerGameboard.missedShots).toContain(15);
   });
 
   test("if computerPlayer makes DIFFERENT / UNIQUE random plays", () => {
-    for (let i = 0; i < 100; i++) { // call the function 100 times
+    for (let i = 0; i < 100; i++) {
+      // call the function 100 times
       computerPlayer.takeTurn(computerPlayer.computerRandomPlay());
     }
     // SET Object only accepts unique values
     const uniqueSet = new Set(computerPlayer.previousAttacks);
-    expect(uniqueSet.size)
-      .toBe(computerPlayer.previousAttacks.length);
+    expect(uniqueSet.size).toBe(computerPlayer.previousAttacks.length);
   });
 
   it("should NOT accept more than 100 computer's random plays", () => {
@@ -45,7 +40,6 @@ describe("player-factory Factory", () => {
     computerPlayer.takeTurn(computerPlayer.computerRandomPlay()); // 102th function call
     computerPlayer.takeTurn(computerPlayer.computerRandomPlay()); // 103th function call
     computerPlayer.takeTurn(computerPlayer.computerRandomPlay()); // 104th function call
-    expect(computerPlayer.previousAttacks.length)
-      .toBe(100);
+    expect(computerPlayer.previousAttacks.length).toBe(100);
   });
 });

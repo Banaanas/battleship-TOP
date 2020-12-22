@@ -11,7 +11,8 @@ const Gameboard = (playerName) => ({
   previousAttacks: [], // Store all enemy's previous attacks
   battleDefeat: false, // If true, there is a winner / loser / game is over
   duplicateStrike: false,
-  allShipsSunk() { // check if all ships are sunk / there is a winner loser / game is over
+  allShipsSunk() {
+    // check if all ships are sunk / there is a winner loser / game is over
     // Compare length of all ships'coordinates arrays with all damages array length
     // If they are the same, then game is over
     let allCoords = 0;
@@ -27,20 +28,24 @@ const Gameboard = (playerName) => ({
     } // Game is Over
     return false;
   },
-  placeShip(ship) { // Place each ship on the gameboard with its coordinates
+  placeShip(ship) {
+    // Place each ship on the gameboard with its coordinates
     // eslint-disable-next-line no-restricted-syntax
     for (const coord of ship.coords) {
-      if (this.gameGrid[coord] === true) { // If case already occupied, can't place ship
+      if (this.gameGrid[coord] === true) {
+        // If case already occupied, can't place ship
         return;
       }
     }
-    ship.coords.forEach((coord) => { // Place the ship on the grid
+    ship.coords.forEach((coord) => {
+      // Place the ship on the grid
       this.gameGrid[coord] = true;
       return this.gameGrid;
     });
   },
 
-  randomPlay() { // Random Number Choice for computer player
+  randomPlay() {
+    // Random Number Choice for computer player
     // if previousAttacks === 100, it means all computer's moves have been played
     if (this.previousAttacks.length >= 100) {
       return false;
@@ -54,7 +59,8 @@ const Gameboard = (playerName) => ({
 
     return computerChoice; // return the computer's random number
   },
-  receiveAttack(coord, enemyBoard) { // Gameboard receiving attack
+  receiveAttack(coord, enemyBoard) {
+    // Gameboard receiving attack
     this.duplicateStrike = false; // Reset duplicateStrike if modified before
     if (enemyBoard.previousAttacks.includes(coord)) {
       // displayDontStrikeTwiceMessage();

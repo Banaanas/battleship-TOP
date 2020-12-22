@@ -7,7 +7,8 @@
     "airbnb-base",
     "plugin:jest/recommended",
     "plugin:eslint-comments/recommended",
-    "prettier"
+    "prettier",
+    "plugin:prettier/recommended" // Must be the last extension - https://www.npmjs.com/package/eslint-plugin-prettier
   ],
   "parserOptions": {
     "ecmaVersion": 11,
@@ -44,6 +45,7 @@
       {
         "props": false
       }
-    ]
+    ],
+    "prettier/prettier": "error"
   }
 }

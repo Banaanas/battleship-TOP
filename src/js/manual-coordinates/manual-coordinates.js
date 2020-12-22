@@ -1,6 +1,9 @@
 import renderInitGameboard from "../game-DOM/render-init-gameboard";
 import elementsDOM from "../game-DOM/elements-DOM";
-import { displayClickStartButtonMessage, waitMessage } from "../game-DOM/game-messages";
+import {
+  displayClickStartButtonMessage,
+  waitMessage,
+} from "../game-DOM/game-messages";
 // import gameController from "../game-controller/game-controller";
 
 /** * Placement Object ** */
@@ -22,7 +25,8 @@ const placement = {
   // Determine the index of the ship inside the allShips array which is inside
   // the humangameboard object
   allShipsIndex: undefined,
-  numbersRanges: [ // gameboard grid cases ranges
+  numbersRanges: [
+    // gameboard grid cases ranges
     [0, 9],
     [10, 19],
     [20, 29],
@@ -59,7 +63,10 @@ const placement = {
       elementsDOM.rotateShipButton.remove();
 
       // Attach the startGameButton where Rotate Ship Button was
-      elementsDOM.humanNavy.insertBefore(startGameButton, elementsDOM.resetGameButton);
+      elementsDOM.humanNavy.insertBefore(
+        startGameButton,
+        elementsDOM.resetGameButton,
+      );
 
       // Add Event Listener - After startGameButton appears but not clicked,
       // ask to click startGameButton if User clicks on the computer gameboard
@@ -75,7 +82,9 @@ const placement = {
   renewGridCases(gameboardObj) {
     elementsDOM.humanGameboardGridContainer.innerHTML = "";
     elementsDOM.humanGameboardGridContainer.innerHTML = elementsDOM.gridHTML;
-    const humanGameboardCases = document.querySelectorAll("#human-gameboard-grid-container .gameboard-array");
+    const humanGameboardCases = document.querySelectorAll(
+      "#human-gameboard-grid-container .gameboard-array",
+    );
     // Display already placed ships
     renderInitGameboard(gameboardObj, humanGameboardCases);
   },
@@ -99,7 +108,7 @@ const placement = {
 
     // Change pointer cursor to default cursor on all human gameboard cases
     const humanGameboardCases = document.querySelectorAll(
-      "#human-gameboard-grid-container .gameboard-array"
+      "#human-gameboard-grid-container .gameboard-array",
     );
     humanGameboardCases.forEach((item) => {
       item.style.cursor = "default";
@@ -127,11 +136,15 @@ const placement = {
       const shipRangeMaxNumber = shipRange[1];
 
       // Return if maximum exceeded
-      if ((shipRangeMaxNumber - shipRangeMinNumber) < (this.shipLength - 1)) return;
+      if (shipRangeMaxNumber - shipRangeMinNumber < this.shipLength - 1) return;
 
       // Push horizontal spectralShip coords into array
       // eslint-disable-next-line no-plusplus
-      for (let i = shipRangeMinNumber; i <= (shipRangeMinNumber + this.shipLength - 1); i++) {
+      for (
+        let i = shipRangeMinNumber;
+        i <= shipRangeMinNumber + this.shipLength - 1;
+        i++
+      ) {
         spectralShipCoords.push(i);
       }
 
@@ -145,10 +158,13 @@ const placement = {
 
       // Display horizontal spectral ship if maximum not exceeded and coords are not occupied
       const humanGameboardCases = document.querySelectorAll(
-        "#human-gameboard-grid-container .gameboard-array"
+        "#human-gameboard-grid-container .gameboard-array",
       );
       humanGameboardCases.forEach((item, index) => {
-        if ((index >= shipRangeMinNumber) && (index < shipRangeMinNumber + this.shipLength)) {
+        if (
+          index >= shipRangeMinNumber &&
+          index < shipRangeMinNumber + this.shipLength
+        ) {
           item.style.backgroundColor = "var(--primary-dark-color)";
         }
       });
@@ -156,13 +172,17 @@ const placement = {
 
     /** VERTICAL SPECTRAL SHIP */
     if (placement.orientation === "vertical") {
-      const shipRangeMaxNumber = shipRangeMinNumber + ((this.shipLength - 1) * 10);
+      const shipRangeMaxNumber =
+        shipRangeMinNumber + (this.shipLength - 1) * 10;
 
       if (shipRangeMaxNumber > 99) return;
 
       // Push horizontal spectralShip coords into array
-      for (let i = shipRangeMinNumber; i
-      <= (shipRangeMinNumber + ((this.shipLength - 1) * 10)); i += 10) {
+      for (
+        let i = shipRangeMinNumber;
+        i <= shipRangeMinNumber + (this.shipLength - 1) * 10;
+        i += 10
+      ) {
         spectralShipCoords.push(i);
       }
       // Return if one of the spectralShip coords is already occupied by a real ship
@@ -174,28 +194,37 @@ const placement = {
       }
 
       // Display vertical spectral ship if maximum not exceeded and coords are not occupied
-      for (let index = shipRangeMinNumber; index <= shipRangeMaxNumber; index += 10) {
+      for (
+        let index = shipRangeMinNumber;
+        index <= shipRangeMaxNumber;
+        index += 10
+      ) {
         const humanGameboardCases = document.querySelectorAll(
-          "#human-gameboard-grid-container .gameboard-array"
+          "#human-gameboard-grid-container .gameboard-array",
         );
-        humanGameboardCases[index].style.backgroundColor = "var(--primary-dark-color)";
+        humanGameboardCases[index].style.backgroundColor =
+          "var(--primary-dark-color)";
       }
     }
 
     // Add Ship's Placement Event Listener IF SPECTRAL SHIP WAS DISPLAYED
     // If ship was not displayed, it means ship placement was not possible
     const humanGameboardCases = document.querySelectorAll(
-      "#human-gameboard-grid-container .gameboard-array"
+      "#human-gameboard-grid-container .gameboard-array",
     );
     humanGameboardCases[shipRangeMinNumber].addEventListener("click", () => {
-      this.setShipCoordinates(gameboardObj, this.allShipsIndex, spectralShipCoords);
+      this.setShipCoordinates(
+        gameboardObj,
+        this.allShipsIndex,
+        spectralShipCoords,
+      );
     });
   },
 
   // Make spectral ship disappear when mouse get out of the case
   eraseSpectralShip(gbrdObj, gbrdCases) {
     const humanGameboardCases = document.querySelectorAll(
-      "#human-gameboard-grid-container .gameboard-array"
+      "#human-gameboard-grid-container .gameboard-array",
     );
     humanGameboardCases.forEach((item) => {
       item.style.backgroundColor = "var(--primary-light-color)";

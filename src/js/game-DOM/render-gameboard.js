@@ -9,7 +9,8 @@ const renderGameboard = (gameboardObj, allGameboardCases) => {
       const img = document.createElement("img");
       img.src = explosionIcon;
       img.classList.add("explosion-icon");
-      allGameboardCases[coord].style.backgroundColor = "var(--primary-text-color)";
+      allGameboardCases[coord].style.backgroundColor =
+        "var(--primary-text-color)";
       allGameboardCases[coord].innerHTML = "";
       allGameboardCases[coord].appendChild(img);
     });
@@ -20,7 +21,8 @@ const renderGameboard = (gameboardObj, allGameboardCases) => {
     const img = document.createElement("img");
     img.src = missedShotIcon;
     img.classList.add("missed-shot-icon");
-    allGameboardCases[missedShot].style.backgroundColor = "var(--primary-color)";
+    allGameboardCases[missedShot].style.backgroundColor =
+      "var(--primary-color)";
     allGameboardCases[missedShot].innerHTML = "";
     allGameboardCases[missedShot].appendChild(img);
   });

@@ -36,7 +36,7 @@ const shipChoice = (gamebrdObj) => {
     placement.allShipsIndex = 0;
     placement.renewGridCases(gamebrdObj);
     const gamebrdCases = document.querySelectorAll(
-      "#human-gameboard-grid-container .gameboard-array"
+      "#human-gameboard-grid-container .gameboard-array",
     );
     setSpectralShipProcess(gamebrdObj, gamebrdCases);
     gamebrdCases.forEach((item) => {
@@ -52,7 +52,7 @@ const shipChoice = (gamebrdObj) => {
     placement.allShipsIndex = 1;
     placement.renewGridCases(gamebrdObj);
     const gamebrdCases = document.querySelectorAll(
-      "#human-gameboard-grid-container .gameboard-array"
+      "#human-gameboard-grid-container .gameboard-array",
     );
     setSpectralShipProcess(gamebrdObj, gamebrdCases);
     gamebrdCases.forEach((item) => {
@@ -68,7 +68,7 @@ const shipChoice = (gamebrdObj) => {
     placement.allShipsIndex = 2;
     placement.renewGridCases(gamebrdObj);
     const gamebrdCases = document.querySelectorAll(
-      "#human-gameboard-grid-container .gameboard-array"
+      "#human-gameboard-grid-container .gameboard-array",
     );
     setSpectralShipProcess(gamebrdObj, gamebrdCases);
     gamebrdCases.forEach((item) => {
@@ -84,7 +84,7 @@ const shipChoice = (gamebrdObj) => {
     placement.allShipsIndex = 3;
     placement.renewGridCases(gamebrdObj);
     const gamebrdCases = document.querySelectorAll(
-      "#human-gameboard-grid-container .gameboard-array"
+      "#human-gameboard-grid-container .gameboard-array",
     );
     setSpectralShipProcess(gamebrdObj, gamebrdCases);
     gamebrdCases.forEach((item) => {
@@ -100,7 +100,7 @@ const shipChoice = (gamebrdObj) => {
     placement.allShipsIndex = 4;
     placement.renewGridCases(gamebrdObj);
     const gamebrdCases = document.querySelectorAll(
-      "#human-gameboard-grid-container .gameboard-array"
+      "#human-gameboard-grid-container .gameboard-array",
     );
     setSpectralShipProcess(gamebrdObj, gamebrdCases);
     gamebrdCases.forEach((item) => {
