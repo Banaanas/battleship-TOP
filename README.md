@@ -121,7 +121,7 @@ Grid - Flexbox - Media Queries
 1 - Clone the Project's repository
 
 ```sh
-git https://github.com/Banaanas/battleship-TOP.git
+git clone https://github.com/Banaanas/battleship-TOP.git
 ```
 
 2 - Install NPM Packages / Dependencies
