@@ -87,24 +87,16 @@ Battleship Game achieved as part of <a href="https://www.theodinproject.com/">Th
 
 #### Built With
 
-- [Vanilla JavaScript](http://vanilla-js.com/)
+- [JavaScript](http://vanilla-js.com/)
 
 ES6 - Factory Functions - Random Ship Placement algorithm - Async / Await
 
 Test-Driven Development (TDD) - Jest
 
-- [HTML5](https://www.w3.org/html/)
-- [CSS3](https://www.w3.org/Style/CSS/Overview.html)
-
-Grid - Flexbox - Media Queries
-
+- [HTML](https://www.w3.org/html/)
+- [CSS](https://www.w3.org/Style/CSS/Overview.html)
 - [Jest](https://jestjs.io/)
 - [Webpack](https://webpack.js.org/)
-- [Babel](https://babeljs.io/)
-- [core-js](https://github.com/zloirock/core-js/)
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [stylelint](https://stylelint.io/)
 
 
 <!-- GETTING STARTED -->
